@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed ,waitForAsync} from '@angular/core/testing';
 
 import { CreateComponent } from './create.component';
 
@@ -12,7 +12,7 @@ describe('CreateComponent', () => {
     })
     .compileComponents();
   });
-  
+
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateComponent);
     component = fixture.componentInstance;

@@ -31,6 +31,7 @@ import {
   FacebookLoginProvider
 } from 'angularx-social-login';
 import { AuthInterceptor } from './modules/auth.interceptor';
+import { ParteneriatComponent } from './pages/parteneriat/parteneriat.component';
 
 if (environment.defaultauth === 'firebase') {
   initFirebaseBackend(environment.firebaseConfig);
@@ -50,6 +51,7 @@ const googleLoginOptions = {
   declarations: [
     AppComponent,
     CyptolandingComponent,
+    ParteneriatComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ProjectsRoutingModule } from './projects-routing.module';
+import { parteneriatRoutingModule } from './parteneriat-routing.module';
 import { UIModule } from '../../shared/ui/ui.module';
 
 import { DropzoneModule } from 'ngx-dropzone-wrapper';
@@ -9,14 +9,13 @@ import { FormsModule } from '@angular/forms';
 import { NgbDropdownModule, NgbTooltipModule, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgApexchartsModule } from 'ng-apexcharts';
 
-import { ProjectgridComponent } from './projectgrid/projectgrid.component';
-import { ProjectlistComponent } from './projectlist/projectlist.component';
+import { GridComponent } from './grid/grid.component';
+import { ListComponent } from './list/list.component';
 import { OverviewComponent } from './overview/overview.component';
 import { CreateComponent } from './create/create.component';
-import { parteneriatRoutingModule } from '../parteneriat/parteneriat-routing.module';
 
 @NgModule({
-  declarations: [ProjectgridComponent, ProjectlistComponent, OverviewComponent, CreateComponent],
+  declarations: [GridComponent, ListComponent, OverviewComponent, CreateComponent],
   imports: [
     CommonModule,
     UIModule,
@@ -29,4 +28,4 @@ import { parteneriatRoutingModule } from '../parteneriat/parteneriat-routing.mod
   ]
 })
 
-export class ProjectsModule { }
+export class ParteneriatModule { }

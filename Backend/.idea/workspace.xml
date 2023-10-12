@@ -5,45 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bd1626f-a9bc-4879-bec2-82ef27d29fb9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/configuration/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/configuration/SpringDocConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/configuration/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/controllers/ParteneriatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/entities/Parteneriat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/repositories/ParteneriatRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/services/ParteneriatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/services/ParteneriatServiceInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Controllers/SocialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Controllers/SocialController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Services/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/entities/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/entities/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/controller/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/controller/AppUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/repository/AppUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/services/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/services/AppUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/Utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/Utils/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/RouteValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/RouteValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/sidebar/menu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/sidebar/menu.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/vertical/vertical.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/vertical/vertical.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/service/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/signin/signin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/signin/signin.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/vitrine/sakai-ng" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partenariat/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/partenariat/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="com.haulmont.jpb.JpaEntity" />
+        <option value="com.haulmont.jpb.JpaRepository" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -51,13 +40,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2Wa62NBizcfU4dgMQFcLAYjAfr1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -65,18 +50,114 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "User",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/nairo/OneDrive/Desktop/Micro/CulTechConnect-5SAE2/Backend/partenariat/src/main/java/tn/esprit/partenariat",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "spring.configuration.checksum": "e58674979710a6719599a4bfb593f501",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nairo\OneDrive\Desktop\Micro\CulTechConnect-5SAE2\Backend\partenariat\src\main\java\tn\esprit\partenariat" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="tn.esprit.partenariat.services" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install -X " />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
   <component name="RunManager" selected="Spring Boot.NotificationApplication">
+    <configuration name="api-gateway [clean,install,-X]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings">
+          <MavenGeneralSettings>
+            <option name="alwaysUpdateSnapshots" value="false" />
+            <option name="checksumPolicy" value="NOT_SET" />
+            <option name="emulateTerminal" value="false" />
+            <option name="failureBehavior" value="NOT_SET" />
+            <option name="localRepository" value="" />
+            <option name="mavenHome" value="Bundled (Maven 3)" />
+            <option name="nonRecursive" value="false" />
+            <option name="outputLevel" value="INFO" />
+            <option name="printErrorStackTraces" value="false" />
+            <option name="showDialogWithAdvancedSettings" value="false" />
+            <option name="threads" />
+            <option name="useMavenConfig" value="true" />
+            <option name="usePluginRegistry" value="false" />
+            <option name="userSettingsFile" value="" />
+            <option name="workOffline" value="false" />
+          </MavenGeneralSettings>
+        </option>
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="#USE_PROJECT_JDK" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="" />
+          </MavenRunnerSettings>
+        </option>
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="-X" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/Authentication" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apigateway.ApiGatewayApplication" />
@@ -193,9 +274,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.PartenariatApplication" />
         <item itemvalue="Spring Boot.ReclamationApplication" />
         <item itemvalue="Spring Boot.RatingApplication" />
-        <item itemvalue="Spring Boot.PartenariatApplication" />
         <item itemvalue="Spring Boot.EvenementApplication" />
         <item itemvalue="Spring Boot.BlogApplication" />
       </list>
@@ -210,6 +291,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696958137583</updated>
       <workItem from="1696958139312" duration="555000" />
+      <workItem from="1697018600227" duration="9175000" />
     </task>
     <servers />
   </component>

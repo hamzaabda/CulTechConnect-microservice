@@ -251,26 +251,26 @@ export const MENU: MenuItem[] = [
         subItems: [
             {
                 id: 40,
-                label: 'MENUITEMS.PROJECTS.LIST.GRID',
-                link: '/projects/grid',
+                label: 'List Grid',
+                link: '/partnerships/grid',
                 parentId: 38
             },
             {
                 id: 41,
-                label: 'MENUITEMS.PROJECTS.LIST.PROJECTLIST',
-                link: '/projects/list',
+                label: 'Partnerships List',
+                link: '/partnerships/list',
                 parentId: 38
             },
             {
                 id: 42,
                 label: 'MENUITEMS.PROJECTS.LIST.OVERVIEW',
-                link: '/projects/overview',
+                link: '/partnerships/overview',
                 parentId: 38
             },
             {
                 id: 43,
                 label: 'MENUITEMS.PROJECTS.LIST.CREATE',
-                link: '/projects/create',
+                link: '/partnerships/create',
                 parentId: 38
             }
         ]
