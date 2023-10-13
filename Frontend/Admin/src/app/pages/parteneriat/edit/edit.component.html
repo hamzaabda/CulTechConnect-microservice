@@ -1,0 +1,133 @@
+<div class="container-fluid">
+    <!-- start page title -->
+    <app-page-title title="Create New" [breadcrumbItems]="breadCrumbItems"></app-page-title>
+    <!-- end page title -->
+  
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title mb-4">Create New Partnership</h4>
+            <form #form="ngForm" (ngSubmit)="savePartnership();">
+              <div class="row mb-4">
+                <label for="partnershipname" class="col-form-label col-lg-2">Partnership Name</label>
+                <div class="col-lg-10">
+                  <input
+                    id="partnershipname"
+                    name="partnershipname"
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Partnership Name..."
+                    [(ngModel)]="p.nomParteneriat"
+                    required
+                    [ngModelOptions]="{ standalone: true }"
+                    #partnershipName="ngModel"
+                  />
+                  <div *ngIf="partnershipName.invalid && (partnershipName.dirty || partnershipName.touched)">
+                    <div *ngIf="partnershipName.errors?.required" style="color: red;">Partnership Name is required.</div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row mb-4">
+                <label for="partnerdesc" class="col-form-label col-lg-2">Partnership Description</label>
+                <div class="col-lg-10">
+                  <textarea
+                    class="form-control"
+                    id="partnerdesc"
+                    rows="3"
+                    placeholder="Enter Partnership Description..."
+                    [(ngModel)]="p.description"
+                    required
+                    [ngModelOptions]="{ standalone: true }"
+                    #partnershipDescription="ngModel"
+                  ></textarea>
+                  <div *ngIf="partnershipDescription.invalid && (partnershipDescription.dirty || partnershipDescription.touched)">
+                    <div *ngIf="partnershipDescription.errors?.required" style="color: red;">Partnership Description is required.</div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row mb-4">
+                <label for="partnershipbudget" class="col-form-label col-lg-2">Budget</label>
+                <div class="col-lg-10">
+                  <input
+                    id="partnershipbudget"
+                    name="partnershipbudget"
+                    type="text"
+                    placeholder="Enter Partnership Budget..."
+                    class="form-control"
+                    [(ngModel)]="p.budget"
+                    required
+                    [ngModelOptions]="{ standalone: true }"
+                    #partnershipBudget="ngModel"
+                  />
+                  <div *ngIf="partnershipBudget.invalid && (partnershipBudget.dirty || partnershipBudget.touched)">
+                    <div *ngIf="partnershipBudget.errors?.required" style="color: red;">Budget is required.</div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row mb-4">
+                <label for="partnershipnum" class="col-form-label col-lg-2">Phone Number</label>
+                <div class="col-lg-10">
+                  <input
+                    id="partnershipnum"
+                    name="partnershipnum"
+                    type="text"
+                    placeholder="Enter Partnership Phone Number..."
+                    class="form-control"
+                    [(ngModel)]="p.numeroTelephone"
+                    [ngModelOptions]="{ standalone: true }"
+                    required
+                    pattern="[0-9]*"
+                    #partnershipPhone="ngModel"
+                  />
+                  <div *ngIf="partnershipPhone.invalid && (partnershipPhone.dirty || partnershipPhone.touched)">
+                    <div *ngIf="partnershipPhone.errors?.required" style="color: red;">Phone number is required.</div>
+                    <div *ngIf="partnershipPhone.errors?.pattern" style="color: red;">Invalid phone number format. Please use numbers only.</div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row mb-4">
+                <label for="partnershipemail" class="col-form-label col-lg-2">Email</label>
+                <div class="col-lg-10">
+                  <input
+                    id="partnershipemail"
+                    name="partnershipemail"
+                    type="email"
+                    placeholder="Enter Partnership Email..."
+                    class="form-control"
+                    [(ngModel)]="p.email"
+                    [ngModelOptions]="{ standalone: true }"
+                    required
+                    #partnershipEmail="ngModel"
+                  />
+                  <div *ngIf="partnershipEmail.invalid && (partnershipEmail.dirty || partnershipEmail.touched)">
+                    <div *ngIf="partnershipEmail.errors?.required" style="color: red;">Email is required.</div>
+                    <div *ngIf="partnershipEmail.errors?.email" style="color: red;">Invalid email format.</div>
+                  </div>
+                </div>
+              </div>
+            </form>
+  
+            <div class="row justify-content-end">
+              <div class="col-lg-10">
+                <button
+                  [disabled]="form.invalid"
+                  type="submit"
+                  class="btn btn-primary"
+                  (click)="savePartnership()"
+                >
+                  Edit Partnership
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+  </div> <!-- container-fluid -->
+  

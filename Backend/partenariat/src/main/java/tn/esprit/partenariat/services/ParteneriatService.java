@@ -33,16 +33,29 @@ public class ParteneriatService implements ParteneriatServiceInterface {
     }
 
     @Override
-    public Parteneriat updateParteneriat(Long idParteneriat ,Parteneriat p ) {
-        Parteneriat p1 =pr.findById(idParteneriat).orElse(null);
-        assert p1 != null;
-        p1.setNomParteneriat(p.getNomParteneriat());
-        p1.setDescription(p.getDescription());
-        p1.setEmail(p.getEmail());
-        p1.setNumeroTelephone(p.getNumeroTelephone());
-        return pr.save(p1);
+    public Parteneriat updateParteneriat(Long idParteneriat, Parteneriat p) {
+        Parteneriat existingParteneriat = pr.findById(idParteneriat).orElse(null);
 
+        if (existingParteneriat != null) {
+            if (p.getNomParteneriat() != null) {
+                existingParteneriat.setNomParteneriat(p.getNomParteneriat());
+            }
+            if (p.getDescription() != null) {
+                existingParteneriat.setDescription(p.getDescription());
+            }
+            if (p.getEmail() != null) {
+                existingParteneriat.setEmail(p.getEmail());
+            }
+            if (p.getNumeroTelephone() != null) {
+                existingParteneriat.setNumeroTelephone(p.getNumeroTelephone());
+            }
+
+            return pr.save(existingParteneriat);
+        } else {
+            throw new ParteneriatNotFoundException("Parteneriat not found with ID: " + idParteneriat);
+        }
     }
+
 
     @Override
     public void deleteParteneriat(Long id) {

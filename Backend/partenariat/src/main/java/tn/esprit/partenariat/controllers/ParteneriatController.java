@@ -7,6 +7,7 @@
     import org.springframework.http.ResponseEntity;
     import org.springframework.web.bind.annotation.*;
     import tn.esprit.partenariat.entities.Parteneriat;
+    import tn.esprit.partenariat.services.ParteneriatNotFoundException;
     import tn.esprit.partenariat.services.ParteneriatServiceInterface;
 
     import java.time.LocalDateTime;
@@ -42,12 +43,12 @@
             return new ResponseEntity<>(createdParteneriat, HttpStatus.CREATED);
         }
 
-        @PutMapping("/updateParteneriat/{id}")
-        public ResponseEntity<Parteneriat> updateParteneriat(@PathVariable Long id, @RequestBody Parteneriat parteneriat) {
-            Parteneriat updatedParteneriat = psI.updateParteneriat(id, parteneriat);
-            if (updatedParteneriat != null) {
+        @PutMapping("/updateParteneriat/{idParteneriat}")
+        public ResponseEntity<Parteneriat> updateParteneriat(@PathVariable Long idParteneriat, @RequestBody Parteneriat p) {
+            try {
+                Parteneriat updatedParteneriat = psI.updateParteneriat(idParteneriat, p);
                 return new ResponseEntity<>(updatedParteneriat, HttpStatus.OK);
-            } else {
+            } catch (ParteneriatNotFoundException ex) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
         }

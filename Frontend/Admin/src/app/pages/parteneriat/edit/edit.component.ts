@@ -1,21 +1,22 @@
-import { Component, OnInit, Input, EventEmitter, ViewChild, Output } from '@angular/core';
-import {  NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Parteneriat } from 'src/app/modules/models/parteneriat';
 import { PartnershipService } from 'src/app/services/partnership.service';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.scss']
+  selector: 'app-edit',
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.scss']
 })
+export class EditComponent implements OnInit {
 
-
-export class CreateComponent implements OnInit {
-
-  constructor(private calendar: NgbCalendar,private ps: PartnershipService) { }
+  constructor(private ps: PartnershipService, private route: ActivatedRoute) { }
   breadCrumbItems: Array<{}>;
 
+  partnership: Parteneriat;
+
+  
   selected: any;
   hidden: boolean;
   p: Parteneriat = {
@@ -29,15 +30,27 @@ export class CreateComponent implements OnInit {
 
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      const id = +params.get('id');
+      this.loadPartnership(id);
+    });
     this.breadCrumbItems = [{ label: 'Partenership' }, { label: 'Create New', active: true }];
     this.selected = '';
     this.hidden = true;
   }
 
   
+
+  loadPartnership(id: number) {
+    this.ps.getParteneriatById(id).subscribe((data) => {
+      this.p = data; 
+    });
+  }
+  
+  
   savePartnership() {
     if (this.isFormValid()) {
-      this.ps.addParteneriat(this.p).subscribe(
+      this.ps.updateParteneriat(this.p.idParteneriat,this.p).subscribe(
         (res) => {
           Swal.fire({
             icon: 'success',
@@ -71,6 +84,5 @@ export class CreateComponent implements OnInit {
     return true;
   }
   
-
 
 }

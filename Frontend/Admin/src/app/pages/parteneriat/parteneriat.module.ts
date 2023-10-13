@@ -13,9 +13,11 @@ import { GridComponent } from './grid/grid.component';
 import { ListComponent } from './list/list.component';
 import { OverviewComponent } from './overview/overview.component';
 import { CreateComponent } from './create/create.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EditComponent } from './edit/edit.component'; 
 
 @NgModule({
-  declarations: [GridComponent, ListComponent, OverviewComponent, CreateComponent],
+  declarations: [GridComponent, ListComponent, OverviewComponent, CreateComponent, EditComponent],
   imports: [
     CommonModule,
     UIModule,
@@ -24,7 +26,8 @@ import { CreateComponent } from './create/create.component';
     NgApexchartsModule,
     DropzoneModule,
     FormsModule,
-    NgbDatepickerModule
+    NgbDatepickerModule,
+    ReactiveFormsModule
   ]
 })
 

@@ -5,19 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bd1626f-a9bc-4879-bec2-82ef27d29fb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/configuration/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/configuration/SpringDocConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/configuration/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/controllers/ParteneriatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/entities/Parteneriat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/repositories/ParteneriatRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/services/ParteneriatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/services/ParteneriatServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/services/ParteneriatNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partenariat/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/partenariat/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/controllers/ParteneriatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/controllers/ParteneriatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/entities/Parteneriat.java" beforeDir="false" afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/entities/Parteneriat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/services/ParteneriatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/partenariat/src/main/java/tn/esprit/partenariat/services/ParteneriatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/sidebar/menu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/sidebar/menu.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/models/parteneriat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/models/parteneriat.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/pages-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/pages-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/create/create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/create/create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/create/create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/create/create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/grid/grid.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/grid/grid.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/grid/grid.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/grid/grid.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/grid/grid.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/grid/grid.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/list/list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/list/list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/list/list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/list/list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/overview/overview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/overview/overview.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/overview/overview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/overview/overview.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/parteneriat.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/parteneriat/parteneriat.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +63,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "User",
+    "git-widget-placeholder": "Partnership",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/nairo/OneDrive/Desktop/Micro/CulTechConnect-5SAE2/Backend/partenariat/src/main/java/tn/esprit/partenariat",
     "node.js.detected.package.eslint": "true",
@@ -74,6 +79,9 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="tn.esprit.partenariat.services" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nairo\OneDrive\Desktop\Micro\CulTechConnect-5SAE2\Backend\partenariat\src\main\java\tn\esprit\partenariat" />
     </key>
@@ -291,7 +299,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696958137583</updated>
       <workItem from="1696958139312" duration="555000" />
-      <workItem from="1697018600227" duration="9175000" />
+      <workItem from="1697018600227" duration="21363000" />
     </task>
     <servers />
   </component>

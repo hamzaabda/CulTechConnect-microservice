@@ -26,6 +26,9 @@ public class Parteneriat {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "budget")
+    private Long budget;
+
     @Column(name = "description")
     private String description;
 
