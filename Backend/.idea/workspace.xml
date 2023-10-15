@@ -5,45 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bd1626f-a9bc-4879-bec2-82ef27d29fb9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/src/main/java/tn/esprit/blog/controller/BlogPostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/src/main/java/tn/esprit/blog/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/src/main/java/tn/esprit/blog/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/src/main/java/tn/esprit/blog/entity/BlogPost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/src/main/java/tn/esprit/blog/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/src/main/java/tn/esprit/blog/entity/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/src/main/java/tn/esprit/blog/repository/BlogPostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/src/main/java/tn/esprit/blog/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/src/main/java/tn/esprit/blog/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/src/main/java/tn/esprit/blog/service/BlogPostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/src/main/java/tn/esprit/blog/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/src/main/java/tn/esprit/blog/service/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Controllers/SocialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Controllers/SocialController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Services/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/entities/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/entities/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/controller/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/controller/AppUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/repository/AppUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/services/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/services/AppUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/Utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/Utils/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/RouteValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/RouteValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/sidebar/menu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/sidebar/menu.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/vertical/vertical.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/vertical/vertical.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/service/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/signin/signin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/signin/signin.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/vitrine/sakai-ng" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/blog/blog-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/blog/blog-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/blog/blog.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/blog/blog.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/blog/bloggrid/bloggrid.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/blog/bloggrid/bloggrid.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/blog/bloggrid/bloggrid.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/blog/bloggrid/bloggrid.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/blog/detail/detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/blog/detail/detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/blog/detail/detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/blog/detail/detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -51,32 +49,41 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2Wa62NBizcfU4dgMQFcLAYjAfr1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "User",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "e58674979710a6719599a4bfb593f501",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;User&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ghassen/Desktop/khaddem/khaddem&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e58674979710a6719599a4bfb593f501&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Spring Boot.NotificationApplication">
+}</component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BlogApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apigateway.ApiGatewayApplication" />
@@ -193,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.BlogApplication" />
         <item itemvalue="Spring Boot.ReclamationApplication" />
         <item itemvalue="Spring Boot.RatingApplication" />
         <item itemvalue="Spring Boot.PartenariatApplication" />
         <item itemvalue="Spring Boot.EvenementApplication" />
-        <item itemvalue="Spring Boot.BlogApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -210,6 +217,11 @@
       <option name="presentableId" value="Default" />
       <updated>1696958137583</updated>
       <workItem from="1696958139312" duration="555000" />
+      <workItem from="1697016424303" duration="19544000" />
+      <workItem from="1697106314229" duration="1105000" />
+      <workItem from="1697275958067" duration="4496000" />
+      <workItem from="1697364590078" duration="8294000" />
+      <workItem from="1697379710454" duration="2932000" />
     </task>
     <servers />
   </component>
