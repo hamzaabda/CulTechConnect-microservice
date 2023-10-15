@@ -126,8 +126,13 @@ export class TopbarComponent implements OnInit {
     } else {
       this.authFackservice.logout();
     }
-    this.router.navigate(['/account/login']);
+  
+    // Clear the localStorage
+    localStorage.clear();
+  
+    this.router.navigate(['/auth/login']);
   }
+  
 
   /**
    * Fullscreen method
