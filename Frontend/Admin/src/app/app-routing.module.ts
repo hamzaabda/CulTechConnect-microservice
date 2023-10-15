@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'auth', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule) },
   { path: 'account', loadChildren: () => import('./account/account.module').then(m => m.AccountModule) },
   { path: 'users',component: LayoutComponent, loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule) },
+  { path: 'chating',component: LayoutComponent, loadChildren: () => import('./modules/chat/chat.module').then(m => m.ChatModule) },
 
   // tslint:disable-next-line: max-line-length
   // { path: '', component: LayoutComponent, loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule), canActivate: [AuthGuard] },

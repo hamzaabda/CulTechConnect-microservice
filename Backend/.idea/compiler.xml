@@ -10,10 +10,10 @@
         <module name="notification" />
         <module name="partenariat" />
         <module name="Authentication" />
-        <module name="Chat" />
         <module name="rating" />
-        <module name="api-gateway" />
         <module name="UserManagement" />
+        <module name="api-gateway" />
+        <module name="Chat" />
         <module name="blog" />
         <module name="reclamation" />
         <module name="Eureka" />
@@ -21,6 +21,20 @@
         <module name="programmeechange" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-gateway" target="1.8" />
+      <module name="Authentication" target="1.8" />
+      <module name="blog" target="1.8" />
+      <module name="Chat" target="1.8" />
+      <module name="Eureka" target="1.8" />
+      <module name="evenement" target="1.8" />
+      <module name="notification" target="1.8" />
+      <module name="partenariat" target="1.8" />
+      <module name="programmeechange" target="1.8" />
+      <module name="rating" target="1.8" />
+      <module name="reclamation" target="1.8" />
+      <module name="UserManagement" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

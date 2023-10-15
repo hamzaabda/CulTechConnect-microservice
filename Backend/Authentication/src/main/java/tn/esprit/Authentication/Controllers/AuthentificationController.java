@@ -7,11 +7,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.Authentication.JWT.TokenService;
+import tn.esprit.Authentication.Repository.UserAuthRepository;
 import tn.esprit.Authentication.Requests.AuthenticationRequest;
 import tn.esprit.Authentication.Requests.AuthenticationResponse;
 import tn.esprit.Authentication.Requests.RegisterRequest;
 import tn.esprit.Authentication.Services.AuthService;
 import tn.esprit.Authentication.Services.EmailConfirmationTokenService;
+import tn.esprit.Authentication.entities.AppUser;
 import tn.esprit.Authentication.entities.EmailConfirmationToken;
 
 import java.util.Optional;
@@ -30,6 +32,8 @@ public class AuthentificationController {
     @Autowired
     private EmailConfirmationTokenService emailConfirmationTokenService;
 
+    @Autowired
+    private UserAuthRepository userAuthRepository;
 
     @PostMapping("/login")
     public AuthenticationResponse login(@RequestBody  AuthenticationRequest authenticationRequest){
@@ -58,5 +62,13 @@ public class AuthentificationController {
         tokenService.validateToken(token);
         return "Token is valid";
     }
+
+
+    @GetMapping("/getByNickname/{nickname}")
+    public AppUser getUserByNickname(@PathVariable String nickname) {
+        return userAuthRepository.findAppUserByUsername(nickname).get();
+    }
+
+
 
 }

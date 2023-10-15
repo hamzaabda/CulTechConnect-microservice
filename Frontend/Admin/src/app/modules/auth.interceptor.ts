@@ -15,7 +15,7 @@ export class AuthInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<any>> {
 
     // Check if the request URL ends with '/login' or '/register'
-    if (req.url.endsWith('/login') || req.url.endsWith('/register') || req.url.endsWith('/google') || req.url.endsWith('/facebook')  || req.url.endsWith('/getroles'))  {
+    if (req.url.endsWith('/login') || req.url.endsWith('/register') || req.url.endsWith('/google') || req.url.endsWith('/facebook')  || req.url.endsWith('/getroles')) {
       // Do not add the Authorization header for Login or Register requests
       return next.handle(req);
     }

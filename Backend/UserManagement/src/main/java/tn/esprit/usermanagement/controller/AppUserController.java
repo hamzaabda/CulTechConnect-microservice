@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import tn.esprit.usermanagement.entities.AppUser;
 import tn.esprit.usermanagement.services.AppUserService;
 
+import javax.ws.rs.Path;
 import java.util.List;
 
 @RestController
@@ -49,5 +50,18 @@ public class AppUserController {
     {
         appUserService.removeUser(idUser);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/getuserbyid/{idUser}")
+    public ResponseEntity<AppUser> getUserbyId(@PathVariable("idUser")int idUser)
+    {
+       return new ResponseEntity<>(appUserService.getUserById(idUser), HttpStatus.OK);
+    }
+
+
+    @GetMapping("/getUserByUsername/{username}")
+    public ResponseEntity<AppUser> getUserByUsername(@PathVariable("username") String username)
+    {
+        return new ResponseEntity<>(appUserService.findAppUserByUsername(username),HttpStatus.OK);
     }
 }

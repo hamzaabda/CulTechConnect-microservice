@@ -1,0 +1,28 @@
+/* Add this CSS to your component's CSS file or a global stylesheet */
+.rounded-avatar {
+    border-radius: 50%; /* Creates a circular shape */
+    width: 100px; /* Set the desired width */
+    height: 100px; /* Set the desired height */
+    object-fit: cover; /* Maintain image aspect ratio and cover the container */
+  }
+  
+  .join-message {
+    background-color: #e0e0e0; /* Set the background color */
+    padding: 10px; /* Add padding for spacing */
+    border-radius: 10px; /* Add rounded corners */
+    width: 80%; /* Adjust the width as needed */
+    margin: 10px 0; /* Add margin for spacing between messages */
+    font-weight: bold; /* Make the message bold */
+    text-align: center; /* Center-align the message */
+  }
+  
+  .centered-message {
+    text-align: center;
+  }
+  .smaller-badge {
+    font-size: 10px; /* Adjust the font size as needed */
+  }
+
+  .custom-card {
+    background-color: #556ee6 /* Light Blue */
+  }

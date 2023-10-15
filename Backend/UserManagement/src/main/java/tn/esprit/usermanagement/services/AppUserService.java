@@ -81,4 +81,15 @@ public class AppUserService {
 
     }
 
+
+    public AppUser findAppUserByUsername(String username)
+    {
+        if(appUserRepository.findAppUserByUsername(username).isPresent())
+        {
+            return  appUserRepository.findAppUserByUsername(username).get();
+        }
+        else return null;
+
+    }
+
 }

@@ -8,6 +8,9 @@ import { Observable } from 'rxjs';
 export class UsersService {
 
   ADMIN_URL = 'http://localhost:9000/api/user/admin/'
+
+    Adherant_URL = 'http://localhost:9000/api/user/adherant/';
+
   constructor(private http:HttpClient) { }
 
 
@@ -38,6 +41,14 @@ export class UsersService {
   {
     const requestURL = this.ADMIN_URL+`edituser/${idUser}`;
     return this.http.put(requestURL,user);
+
+  }
+
+
+  getUserByusername(username:string)
+  {
+    const requestURL = this.Adherant_URL+`getUserByUsername/${username}`
+    return this.http.get(requestURL);
 
   }
 
