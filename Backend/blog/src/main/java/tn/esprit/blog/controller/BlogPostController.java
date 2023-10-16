@@ -13,6 +13,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/blog-posts")
+@CrossOrigin(origins = "http://localhost:4300/")
 
 public class BlogPostController {
     private BlogPostService blogPostService;
@@ -24,13 +25,11 @@ public class BlogPostController {
     }
 
     @GetMapping("/all")
-    @CrossOrigin(origins = "http://localhost:4200")
     public List<BlogPost> getAllBlogPosts() {
         return blogPostService.getAllBlogPosts();
     }
 
     @GetMapping("/{id}")
-    @CrossOrigin(origins = "http://localhost:4200")
     public BlogPost getBlogPostById(@PathVariable Long id) {
         return blogPostService.getBlogPostById(id);
     }
@@ -59,7 +58,6 @@ public class BlogPostController {
     }
 
     @PostMapping("/{blogPostId}/assign-comment")
-    @CrossOrigin(origins = "http://localhost:4200")
     public BlogPost assignCommentToBlogPost(
             @PathVariable Long blogPostId,
             @RequestBody Comment comment) {
@@ -67,7 +65,6 @@ public class BlogPostController {
     }
 
     @PostMapping("/{postId}/like")
-    @CrossOrigin(origins = "http://localhost:4200")
     public BlogPost likePost(@PathVariable Long postId) {
         return blogPostService.likePost(postId);
     }

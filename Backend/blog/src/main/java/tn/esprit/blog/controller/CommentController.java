@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/comments")
+@CrossOrigin(origins = "http://localhost:4300/")
 public class CommentController {
     private CommentService commentService;
 
@@ -18,7 +19,6 @@ public class CommentController {
         this.commentService = commentService;
     }
     @GetMapping("/allcomments")
-    @CrossOrigin(origins = "http://localhost:4200")
     public List<Comment> getAllComments() {
         return commentService.getAllComments();
     }
@@ -33,7 +33,6 @@ public class CommentController {
     }
 
     @GetMapping("/count")
-    @CrossOrigin(origins = "http://localhost:4200")
     public long countComments() {
         return commentService.countComments();
     }

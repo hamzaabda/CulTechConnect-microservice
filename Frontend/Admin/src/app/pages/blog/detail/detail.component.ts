@@ -3,6 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Params } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import jwtDecode from 'jwt-decode';
+import { AuthService } from 'src/app/modules/auth/service/auth.service';
+
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -29,12 +32,57 @@ export class DetailComponent implements OnInit {
  buttonState: string = 'inactive';
  // bread crumb items
  breadCrumbItems: Array<{}>;
-
+ connecteduser;
   constructor(private http : HttpClient,
     private route: ActivatedRoute,
-    private datePipe: DatePipe) { }
+    private datePipe: DatePipe,
+    private AuthService:AuthService,
+    
+    ) { }
 
   ngOnInit(): void {
+
+    if(localStorage.getItem('access_token') !== null || localStorage.getItem('refresh_token') !== null)
+    {
+    const access_token  = localStorage.getItem('access_token');
+    const refresh_token = localStorage.getItem('refresh_token');
+    interface DecodedToken {
+      sub: string;
+      Role: string; 
+      exp : string;
+      iat: string;
+    }
+      const decoded: DecodedToken = jwtDecode(access_token);
+      const sub = decoded.sub;
+      const roles = decoded.Role;
+      const exp = decoded.exp;
+      const iat = decoded.iat;
+      console.log(sub + roles + exp + iat);
+      this.AuthService.getuserbyemail(sub).subscribe(
+        (data) => {
+
+          this.connecteduser = data
+          console.log(data?.id)
+          console.log(data?.username)
+          console.log(data?.email)
+          console.log(data?.nom)
+          console.log(data?.prenom)
+          console.log(data?.isEnabled)
+        }
+
+      );
+    }
+    else{
+      this.connecteduser = null;
+    }
+
+
+
+
+
+
+
+
     console.log('this is spartaaaa !!!');
     this.breadCrumbItems = [{ label: 'Blog' }, { label: 'Blog Details', active: true }];
     this.getDetailById();

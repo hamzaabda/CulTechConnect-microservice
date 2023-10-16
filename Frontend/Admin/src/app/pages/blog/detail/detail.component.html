@@ -95,11 +95,11 @@
                                             <div>
                                                 <div class="media py-3 border-top" *ngFor="let com of BlocPost.comments">
                                                     <div class="avatar-xs me-3">
-                                                        <img src="assets/images/users/avatar-2.jpg" alt=""
+                                                        <img [src]="connecteduser.profileimageurl" alt=""
                                                             class="img-fluid d-block rounded-circle">
                                                     </div>
                                                     <div class="media-body">
-                                                        <h5 class="font-size-14 mb-1">User {{BlocPost.id}} <small
+                                                        <h5 class="font-size-14 mb-1">{{connecteduser.username}} <small
                                                                 class="text-muted float-end">{{getDateOnly(com.createdDate)}}</small></h5>
                                                         <p class="text-muted">{{com.text}}</p>
 
