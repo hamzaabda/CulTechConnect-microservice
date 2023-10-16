@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomEvent } from './event.model';
 import { EventService } from './event.service';
-
+import Swal  from 'sweetalert2';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -34,6 +34,12 @@ export class ListComponent implements OnInit {
 
   deleteEvent(id: number) {
     this.eventService.deleteEvent(id).subscribe(() => {
+      Swal.fire({
+        icon: 'success',
+        title: 'Événement supprimé',
+        text: 'Événement supprimé avec succès!',
+        footer: '<a href="/tasks/list">Liste</a>'
+      })
       this.loadEvents();
     });
   }
