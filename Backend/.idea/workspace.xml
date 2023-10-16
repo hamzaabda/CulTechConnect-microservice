@@ -65,19 +65,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ChatApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apigateway.ApiGatewayApplication" />
@@ -201,6 +188,7 @@
       <workItem from="1697321620799" duration="2777000" />
       <workItem from="1697358766348" duration="9123000" />
       <workItem from="1697386888806" duration="981000" />
+      <workItem from="1697448314010" duration="480000" />
     </task>
     <servers />
   </component>
