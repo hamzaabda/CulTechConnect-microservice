@@ -5,6 +5,12 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { ChatComponent } from './chat/chat.component';
 import { DefaultComponent } from './dashboards/default/default.component';
 import { FilemanagerComponent } from './filemanager/filemanager.component';
+import { CreateComponent } from './parteneriat/create/create.component';
+import { ParteneriatComponent } from './parteneriat/parteneriat.component';
+import { OverviewComponent } from './parteneriat/overview/overview.component';
+import { ListComponent } from './parteneriat/list/list.component';
+import { GridComponent } from './parteneriat/grid/grid.component';
+import { EditComponent } from './parteneriat/edit/edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard' },
@@ -22,7 +28,11 @@ const routes: Routes = [
   { path: 'tasks', loadChildren: () => import('./tasks/tasks.module').then(m => m.TasksModule) },
   { path: 'contacts', loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule) },
   { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
-  { path: 'pages', loadChildren: () => import('./utility/utility.module').then(m => m.UtilityModule) },
+  { path: 'partnerships/create', component: CreateComponent },
+  { path: 'partnerships/overview/:id', component: OverviewComponent },
+  { path: 'partnerships/list', component: ListComponent},
+  { path: 'partnerships/grid', component: GridComponent},
+  { path: 'partnerships/edit/:id', component: EditComponent },
   { path: 'ui', loadChildren: () => import('./ui/ui.module').then(m => m.UiModule) },
   { path: 'form', loadChildren: () => import('./form/form.module').then(m => m.FormModule) },
   { path: 'tables', loadChildren: () => import('./tables/tables.module').then(m => m.TablesModule) },

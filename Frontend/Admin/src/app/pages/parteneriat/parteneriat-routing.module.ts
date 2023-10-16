@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ProjectgridComponent } from './projectgrid/projectgrid.component';
-import { ProjectlistComponent } from './projectlist/projectlist.component';
+import { GridComponent } from './grid/grid.component';
+import { ListComponent } from './list/list.component';
 import { OverviewComponent } from './overview/overview.component';
-import { CreateComponent } from '../parteneriat/create/create.component';
+import { CreateComponent } from './create/create.component';
 
 const routes: Routes = [
     {
         path: 'grid',
-        component: ProjectgridComponent
+        component: GridComponent
     },
     {
         path: 'list',
-        component: ProjectlistComponent
+        component: ListComponent
     },
     {
         path: 'overview',
@@ -29,4 +29,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class ProjectsRoutingModule {}
+export class parteneriatRoutingModule {}

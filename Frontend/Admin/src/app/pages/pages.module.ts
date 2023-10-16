@@ -37,6 +37,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ChatComponent } from './chat/chat.component';
 
 import { FilemanagerComponent } from './filemanager/filemanager.component';
+import { CreateComponent } from './parteneriat/create/create.component';
+import { OverviewComponent } from './parteneriat/overview/overview.component';
+import { ListComponent } from './parteneriat/list/list.component';
+import { GridComponent } from './parteneriat/grid/grid.component';
+import { ParteneriatModule } from './parteneriat/parteneriat.module';
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   dayGridPlugin,
@@ -55,12 +60,12 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     NgApexchartsModule,
     ReactiveFormsModule,
     DashboardsModule,
+    ParteneriatModule,
     CryptoModule,
     EcommerceModule,
     EmailModule,
     InvoicesModule,
     HttpClientModule,
-    ProjectsModule,
     UIModule,
     TasksModule,
     ContactsModule,
