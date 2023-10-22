@@ -12,6 +12,11 @@ export class ListComponent implements OnInit {
   monthlyStatistics: any[];
   startDate: string = '';
   endDate: string = '';
+  // Ajoutez une variable pour l'événement à mettre à jour
+  updatedEvent: CustomEvent = new CustomEvent();
+  openUpdateForm(event: CustomEvent) {
+    this.updatedEvent = { ...event }; // Copie de l'événement pour mise à jour
+  }
 
   constructor(private eventService: EventService) {}
 
@@ -62,4 +67,18 @@ export class ListComponent implements OnInit {
       this.events = filteredEvents;
     });
   }
+ 
+  updateEvent(updatedEvent: CustomEvent) {
+    this.eventService.updateEvent(updatedEvent.id, updatedEvent).subscribe((response) => {
+      Swal.fire({
+        icon: 'success',
+        title: 'Événement mis à jour',
+        text: 'Événement mis à jour avec succès!'
+      });
+      this.loadEvents();
+      this.updatedEvent = new CustomEvent(); // Réinitialiser l'événement mis à jour
+    });
+  }
+  
+  
 }
