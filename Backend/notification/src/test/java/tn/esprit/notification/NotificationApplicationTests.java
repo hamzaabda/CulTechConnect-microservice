@@ -1,4 +1,4 @@
-package tn.esprit.notification;
+package tn.esprit.Notification;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

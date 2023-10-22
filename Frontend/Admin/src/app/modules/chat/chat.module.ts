@@ -9,12 +9,14 @@ import { ChatComponent } from './chat/chat.component';
 
 import { SimplebarAngularModule } from 'simplebar-angular';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ChathistoryComponent } from './chathistory/chathistory.component';
 
 
 @NgModule({
   declarations: [
   
-    ChatComponent
+    ChatComponent,
+        ChathistoryComponent
   ],
   imports: [
     CommonModule,
