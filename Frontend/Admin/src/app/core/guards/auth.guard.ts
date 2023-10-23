@@ -14,8 +14,18 @@ export class AuthGuard implements CanActivate {
         private authenticationService: AuthenticationService,
         private authFackservice: AuthfakeauthenticationService
     ) { }
-    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-        throw new Error('Method not implemented.');
+    canActivate(
+        route: ActivatedRouteSnapshot,
+        state: RouterStateSnapshot
+    ): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+        // Check if the user is authenticated based on the access token in local storage
+        const accessToken = localStorage.getItem('access_token'); // Adjust the key accordingly
+
+        if (accessToken) {
+            return true;
+        } else {
+            return this.router.createUrlTree(['/auth/login']);
+        }
     }
 
     // canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {

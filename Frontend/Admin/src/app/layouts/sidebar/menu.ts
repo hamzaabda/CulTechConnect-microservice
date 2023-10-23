@@ -64,15 +64,56 @@ export const MENU: MenuItem[] = [
         
     // },
 
+
+
     {
         id: 10,
         label: 'MENUITEMS.CHAT.TEXT',
         icon: 'bx-chat',
-        link: '/chating/chat',
-        
-    }
+        subItems: [
+ 
+            {
+                id: 11,
+                label: 'MENUITEMS.CHAT.TEXT',
+                icon: 'bx-chat',
+                link: '/chating/chat',
+                
+            },
+            {
+                id: 12,
+                label: 'Chat Logs',
+                icon: 'bx-file',
+                link: '/chating/chathistory',
+                
+            }
+
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-    ,
     /*{
         id: 11,
         label: 'MENUITEMS.FILEMANAGER.TEXT',
@@ -83,6 +124,7 @@ export const MENU: MenuItem[] = [
             text: 'MENUITEMS.FILEMANAGER.BADGE',
         },
     },*/
+    
     {
         id: 12,
         label: 'Whats new',

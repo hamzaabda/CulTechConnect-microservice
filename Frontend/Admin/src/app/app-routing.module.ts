@@ -8,19 +8,19 @@ import { Page404Component } from './extrapages/page404/page404.component';
 
 const routes: Routes = [
   { path: 'auth', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule) },
-  { path: 'account', loadChildren: () => import('./account/account.module').then(m => m.AccountModule) },
-  { path: 'users',component: LayoutComponent, loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule) },
-  { path: 'chating',component: LayoutComponent, loadChildren: () => import('./modules/chat/chat.module').then(m => m.ChatModule) },
+  { path: 'account',canActivate: [AuthGuard], loadChildren: () => import('./account/account.module').then(m => m.AccountModule) },
+  { path: 'users',canActivate: [AuthGuard],component: LayoutComponent, loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule) },
+  { path: 'chating',canActivate: [AuthGuard],component: LayoutComponent, loadChildren: () => import('./modules/chat/chat.module').then(m => m.ChatModule) },
 
   // tslint:disable-next-line: max-line-length
   // { path: '', component: LayoutComponent, loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule), canActivate: [AuthGuard] },
   // { path: 'pages', loadChildren: () => import('./extrapages/extrapages.module').then(m => m.ExtrapagesModule), canActivate: [AuthGuard] },
   
   
-  { path: '', component: LayoutComponent, loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)},
-  { path: 'pages', loadChildren: () => import('./extrapages/extrapages.module').then(m => m.ExtrapagesModule)},
+  { path: '',canActivate: [AuthGuard], component: LayoutComponent, loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)},
+  { path: 'pages',canActivate: [AuthGuard], loadChildren: () => import('./extrapages/extrapages.module').then(m => m.ExtrapagesModule)},
 
-  { path: 'crypto-ico-landing', component: CyptolandingComponent },
+  { path: 'crypto-ico-landing',canActivate: [AuthGuard], component: CyptolandingComponent },
   { path: '**', component: Page404Component },
 ];
 
