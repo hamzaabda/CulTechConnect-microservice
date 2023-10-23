@@ -61,4 +61,29 @@ public class ParteneriatService implements ParteneriatServiceInterface {
     public void deleteParteneriat(Long id) {
         pr.deleteById(id);
     }
+
+
+    @Override
+    public Parteneriat verifyParteneriat(Long id) {
+        Parteneriat parteneriat = pr.findById(id).orElse(null);
+
+        if (parteneriat != null) {
+            parteneriat.setVerified(true);
+            return pr.save(parteneriat);
+
+        }
+
+        return parteneriat;
+    }
+
+    @Override
+    public Parteneriat cancelParteneriat(Long id) {
+        Parteneriat parteneriat = pr.findById(id).orElse(null);
+
+        if (parteneriat != null) {
+            parteneriat.setVerified(false);
+            return pr.save(parteneriat);
+        }
+        return parteneriat;
+    }
 }

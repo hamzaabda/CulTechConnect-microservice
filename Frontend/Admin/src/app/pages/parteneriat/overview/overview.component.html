@@ -2,14 +2,11 @@
     <!-- start page title -->
     <app-page-title title="Partnership Overview"></app-page-title>
     <!-- end page title -->
-  
     <div class="row">
       <div class="col-lg-8">
         <div class="card">
           <div class="card-body">
             <div class="media">
-              <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm me-4">
-  
               <div class="media-body overflow-hidden">
                 <h5 class="text-truncate font-size-15">Partnership Name</h5>
                 <p class="text-muted">{{ partnership.nomParteneriat }}</p>
@@ -38,6 +35,10 @@
   
             <p class="text-muted">{{ partnership.budget }}</p>
 
+            <h5 class="font-size-15 mt-4">Status :</h5>
+  
+            <p class="text-muted">{{ partnership.verified }}</p>
+
 
   
             <div class="row task-dates">
@@ -54,6 +55,35 @@
                   <p class="text-muted mb-0">12 Oct, 2019</p>
                 </div>
               </div>
+              <div class="d-print-none">
+                <div class="float-end">
+                  <a href="javascript:window.print()" class="btn btn-success"><i class="fa fa-print"></i></a>
+                  <a class="btn btn-primary w-md ms-1" (click)="open()">Assign to event</a>
+
+
+              <ng-template #content role="document" let-modal>
+                <div class="modal-header">
+                  <h5 class="modal-title mt-0">Assign to event</h5>
+                  <button type="button" class="btn-close" aria-hidden="true" (click)="modal.dismiss('Fermer')"></button>
+                </div>
+                <div class="modal-body">
+                  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                      <label for="eventName">Event Name</label>
+                      <select class="form-select" id="eventName" name="eventName" formControlName="eventName">
+                        <option value="" disabled>Select an event</option>
+                        <option *ngFor="let event of events" [value]="event.id">{{ event.name }}</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn btn-success">Assign</button>
+                  </form>
+               
+                </div>                
+              </ng-template>
+
+              
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -63,7 +93,7 @@
       <div class="col-lg-4">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title mb-4">Team Members</h4>
+            <h4 class="card-title mb-4">Partnership Members</h4>
   
             <div class="table-responsive">
               <table class="table align-middle table-nowrap">
@@ -148,174 +178,5 @@
     </div>
     <!-- end row -->
   
-    <div class="row">
-      
-      <!-- end col -->
-  
-      <div class="col-lg-4">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title mb-4">Attached Files</h4>
-            <div class="table-responsive">
-              <table class="table table-nowrap align-middle table-hover mb-0">
-                <tbody>
-                  <tr>
-                    <td style="width: 45px;">
-                      <div class="avatar-sm">
-                        <span class="avatar-title rounded-circle bg-soft bg-primary text-primary font-size-24">
-                          <i class="bx bxs-file-doc"></i>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Landing.Zip</a></h5>
-                      <small>Size : 3.25 MB</small>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <a href="javascript: void(0);" class="text-dark"><i class="bx bx-download h3 m-0"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="avatar-sm">
-                        <span class="avatar-title rounded-circle bg-soft bg-primary text-primary font-size-24">
-                          <i class="bx bxs-file-doc"></i>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Admin.Zip</a></h5>
-                      <small>Size : 3.15 MB</small>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <a href="javascript: void(0);" class="text-dark"><i class="bx bx-download h3 m-0"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="avatar-sm">
-                        <span class="avatar-title rounded-circle bg-soft bg-primary text-primary font-size-24">
-                          <i class="bx bxs-file-doc"></i>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Logo.Zip</a></h5>
-                      <small>Size : 2.02 MB</small>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <a href="javascript: void(0);" class="text-dark"><i class="bx bx-download h3 m-0"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="avatar-sm">
-                        <span class="avatar-title rounded-circle bg-soft bg-primary text-primary font-size-24">
-                          <i class="bx bxs-file-doc"></i>
-                        </span>
-                      </div>
-                    </td>
-                    <td>
-                      <h5 class="font-size-14"><a href="javascript: void(0);" class="text-dark">Veltrix admin.Zip</a></h5>
-                      <small>Size : 2.25 MB</small>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <a href="javascript: void(0);" class="text-dark"><i class="bx bx-download h3 m-0"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end col -->
-  
-      <div class="col-lg-4">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title mb-4">Comments</h4>
-  
-            <div class="media mb-4">
-              <div class="me-3">
-                <img class="media-object rounded-circle avatar-xs" alt="" src="assets/images/users/avatar-2.jpg">
-              </div>
-              <div class="media-body">
-                <h5 class="font-size-13 mb-1">David Lambert</h5>
-                <p class="text-muted mb-1">
-                  Separate existence is a myth.
-                </p>
-              </div>
-              <div class="ms-3">
-                <a href="javascript: void(0);" class="text-primary">Reply</a>
-              </div>
-            </div>
-  
-            <div class="media mb-4">
-              <div class="me-3">
-                <img class="media-object rounded-circle avatar-xs" alt="" src="assets/images/users/avatar-3.jpg">
-              </div>
-              <div class="media-body">
-                <h5 class="font-size-13 mb-1">Steve Foster</h5>
-                <p class="text-muted mb-1">
-                  <a href="javascript: void(0);" class="text-success">@Henry</a>
-                  To an English person it will like simplified
-                </p>
-                <div class="media mt-3">
-                  <div class="avatar-xs me-3">
-                    <span class="avatar-title rounded-circle bg-soft bg-primary text-primary font-size-16">
-                      J
-                    </span>
-                  </div>
-                  <div class="media-body">
-                    <h5 class="font-size-13 mb-1">Jeffrey Walker</h5>
-                    <p class="text-muted mb-1">
-                      as a skeptical Cambridge friend
-                    </p>
-                  </div>
-                  <div class="ms-3">
-                    <a href="javascript: void(0);" class="text-primary">Reply</a>
-                  </div>
-                </div>
-              </div>
-              <div class="ms-3">
-                <a href="javascript: void(0);" class="text-primary">Reply</a>
-              </div>
-            </div>
-  
-            <div class="media mb-4">
-              <div class="avatar-xs me-3">
-                <span class="avatar-title rounded-circle bg-soft bg-primary text-primary font-size-16">
-                  S
-                </span>
-              </div>
-              <div class="media-body">
-                <h5 class="font-size-13 mb-1">Steven Carlson</h5>
-                <p class="text-muted mb-1">
-                  Separate existence is a myth.
-                </p>
-              </div>
-              <div class="ms-3">
-                <a href="javascript: void(0);" class="text-primary">Reply</a>
-              </div>
-            </div>
-  
-            <div class="text-center mt-4 pt-2">
-              <a href="javascript: void(0);" class="btn btn-primary btn-sm">View more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end col -->
-    </div>
-    <!-- end row -->
   </div>
   

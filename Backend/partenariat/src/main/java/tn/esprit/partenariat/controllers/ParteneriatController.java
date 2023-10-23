@@ -7,6 +7,7 @@
     import org.springframework.http.ResponseEntity;
     import org.springframework.web.bind.annotation.*;
     import tn.esprit.partenariat.entities.Parteneriat;
+    import tn.esprit.partenariat.repositories.ParteneriatRepository;
     import tn.esprit.partenariat.services.ParteneriatNotFoundException;
     import tn.esprit.partenariat.services.ParteneriatServiceInterface;
 
@@ -20,6 +21,9 @@
 
         @Autowired
         ParteneriatServiceInterface psI;
+
+        @Autowired
+        ParteneriatRepository pr;
 
 
         @GetMapping("/getAllParteneriat")
@@ -58,4 +62,44 @@
             psI.deleteParteneriat(id);
         }
 
+
+        @GetMapping("/verify/{id}")
+        public ResponseEntity<Parteneriat> verifyParteneriat(@PathVariable Long id) {
+            Parteneriat verifiedParteneriat = psI.verifyParteneriat(id);
+
+            if (verifiedParteneriat != null) {
+                return ResponseEntity.ok(verifiedParteneriat);
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        }
+
+
+        @GetMapping("/cancelParteneriat/{id}")
+        public ResponseEntity<Parteneriat> cancelParteneriat(@PathVariable Long id) {
+            Parteneriat canceledParteneriat = psI.cancelParteneriat(id);
+
+            if (canceledParteneriat != null) {
+                return ResponseEntity.ok(canceledParteneriat);
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        }
+
+        @PutMapping("/assign-event/{id}/{eventId}")
+        public ResponseEntity<String> assignEventToParteneriat(
+                @PathVariable Long id,
+                @PathVariable Long eventId) {
+            try {
+                Parteneriat p = psI.getParteneriatById(id).orElse(null);
+                assert p != null;
+                p.setEventId(eventId);
+
+                pr.save(p);
+
+                return ResponseEntity.ok("Event ID assigned to Parteneriat successfully.");
+            } catch (Exception e) {
+                return ResponseEntity.badRequest().body("Error assigning event ID to Parteneriat: " + e.getMessage());
+            }
+        }
     }

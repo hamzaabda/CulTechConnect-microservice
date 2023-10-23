@@ -25,7 +25,9 @@ export class EditComponent implements OnInit {
     numeroTelephone: 0,
     email: '',
     description: '',
-    budget: 0
+    budget: 0,
+    verified: false,
+    eventId: 0
   };
 
 

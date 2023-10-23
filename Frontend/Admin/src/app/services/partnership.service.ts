@@ -59,5 +59,18 @@ export class PartnershipService {
     return this.http.get<Parteneriat>(this.apiUrl + "/getParteneriatById/" + id);
   }
 
+  verifyParteneriat(id: number): Observable<Parteneriat> {
+    return this.http.get<Parteneriat>(this.apiUrl + "/verify/" + id);
+  }
+  
+  cancelPartnership(id: number): Observable<Parteneriat> {
+    return this.http.get<Parteneriat>(this.apiUrl + "/cancelParteneriat/" + id);
+  }
 
+
+  assignEventToParteneriat(partnershipId: number, eventId: number): Observable<string> {
+    const url = `${this.apiUrl}/assign-event/${partnershipId}/${eventId}`;
+    return this.http.put<string>(url, null);
+  }
+  
 }
