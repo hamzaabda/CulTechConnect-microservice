@@ -34,4 +34,8 @@ public class Parteneriat {
 
     @Column(name = "verified")
     private Boolean verified;
+
+    @Column(name = "event_id")
+    private Long eventId;
+
 }

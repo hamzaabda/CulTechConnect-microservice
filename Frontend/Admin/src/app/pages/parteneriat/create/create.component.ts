@@ -26,7 +26,8 @@ export class CreateComponent implements OnInit {
     email: '',
     description: '',
     budget: 0,
-    verified: false
+    verified: false,
+    eventId: 0
   };
 
 

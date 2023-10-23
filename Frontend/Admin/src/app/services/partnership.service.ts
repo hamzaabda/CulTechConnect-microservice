@@ -68,4 +68,9 @@ export class PartnershipService {
   }
 
 
+  assignEventToParteneriat(partnershipId: number, eventId: number): Observable<string> {
+    const url = `${this.apiUrl}/assign-event/${partnershipId}/${eventId}`;
+    return this.http.put<string>(url, null);
+  }
+  
 }

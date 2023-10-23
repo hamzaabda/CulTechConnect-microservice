@@ -72,11 +72,12 @@
                       <label for="eventName">Event Name</label>
                       <select class="form-select" id="eventName" name="eventName" formControlName="eventName">
                         <option value="" disabled>Select an event</option>
-                        <option *ngFor="let event of events" [value]="event.name">{{ event.name }}</option>
+                        <option *ngFor="let event of events" [value]="event.id">{{ event.name }}</option>
                       </select>
                     </div>
                     <button type="submit" class="btn btn-success">Assign</button>
                   </form>
+               
                 </div>                
               </ng-template>
 
