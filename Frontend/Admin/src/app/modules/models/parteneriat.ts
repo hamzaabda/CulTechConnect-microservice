@@ -5,6 +5,7 @@ export class Parteneriat {
   email: string;
   description: string;
   budget:number;
+  verified:boolean;
 
   constructor(
     idParteneriat: number,
@@ -12,7 +13,8 @@ export class Parteneriat {
     numeroTelephone: number,
     email: string,
     description: string,
-    budget:number
+    budget:number,
+    verified:boolean
   ) {
     this.idParteneriat = idParteneriat;
     this.nomParteneriat = nomParteneriat;
@@ -20,5 +22,6 @@ export class Parteneriat {
     this.email = email;
     this.description = description;
     this.budget=budget;
+    this.verified=verified;
   }
 }

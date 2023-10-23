@@ -15,4 +15,9 @@ public interface ParteneriatServiceInterface {
     public Parteneriat updateParteneriat(Long idParteneriat ,Parteneriat p );
 
     void deleteParteneriat(Long id);
+
+    public Parteneriat verifyParteneriat(Long id);
+
+
+    public Parteneriat cancelParteneriat(Long id);
 }

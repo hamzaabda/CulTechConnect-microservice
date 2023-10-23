@@ -31,6 +31,9 @@ export class ListComponent implements OnInit {
   });
   }
 
+  refreshPage() {
+    location.reload();
+  }
 
   navigateToCreatePartnership() {
     this.router.navigate(['/partnerships/create']);
@@ -66,7 +69,7 @@ export class ListComponent implements OnInit {
       })
       .then((result) => {
         if (result.value) {
-          // User confirmed the deletion
+       
           this.ps.deleteParteneriat(idPartnership).subscribe(
             () => {
               swalWithBootstrapButtons.fire(
@@ -74,10 +77,10 @@ export class ListComponent implements OnInit {
                 'The partnership has been deleted.',
                 'success'
               );
-              // You can also perform any additional actions here after successful deletion.
+              this.refreshPage();
             },
             (error) => {
-              // Handle the deletion error, if necessary
+            
               console.error('Error deleting partnership:', error);
               swalWithBootstrapButtons.fire(
                 'Error',
@@ -87,7 +90,7 @@ export class ListComponent implements OnInit {
             }
           );
         } else if (result.dismiss === Swal.DismissReason.cancel) {
-          // User canceled the deletion
+         
           swalWithBootstrapButtons.fire(
             'Cancelled',
             'Your imaginary file is safe :)',
@@ -96,6 +99,120 @@ export class ListComponent implements OnInit {
         }
       });
   }
+
+
+  verifyPartnership(idPartnership: number) {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger ms-2'
+      },
+      buttonsStyling: false
+    });
+  
+    swalWithBootstrapButtons
+      .fire({
+        title: 'Are you sure?',
+        text: 'Do you want to verify this partnership?',
+        icon: 'question',
+        confirmButtonText: 'Yes, verify it!',
+        cancelButtonText: 'No, cancel!',
+        showCancelButton: true
+      })
+      .then((result) => {
+        if (result.value) {
+          this.ps.verifyParteneriat(idPartnership).subscribe(
+            (parteneriat) => {
+              if (parteneriat) {
+                swalWithBootstrapButtons.fire(
+                  'Verified!',
+                  'The partnership has been verified.',
+                  'success'
+                );
+                this.refreshPage();
+              } else {
+                swalWithBootstrapButtons.fire(
+                  'Error',
+                  'An error occurred while verifying the partnership.',
+                  'error'
+                );
+              }
+            },
+            (error) => {
+              console.error('Error verifying partnership:', error);
+              swalWithBootstrapButtons.fire(
+                'Error',
+                'An error occurred while verifying the partnership.',
+                'error'
+              );
+            }
+          );
+        } else if (result.dismiss === Swal.DismissReason.cancel) { 
+          swalWithBootstrapButtons.fire(
+            'Cancelled',
+            'The partnership has not been verified.',
+            'error'
+          );
+        }
+      });
+  }
+  
+  cancelPartnership(idPartnership: number) {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger ms-2'
+      },
+      buttonsStyling: false
+    });
+  
+    swalWithBootstrapButtons
+      .fire({
+        title: 'Are you sure?',
+        text: 'Do you want to cancel this partnership?',
+        icon: 'question',
+        confirmButtonText: 'Yes, cancel it!',
+        cancelButtonText: 'No, keep it!',
+        showCancelButton: true
+      })
+      .then((result) => {
+        if (result.value) {
+          this.ps.cancelPartnership(idPartnership).subscribe(
+            (parteneriat) => {
+              if (parteneriat) {
+                swalWithBootstrapButtons.fire(
+                  'Canceled!',
+                  'The partnership has been canceled.',
+                  'success'
+                );
+                this.refreshPage();
+              } else {
+                swalWithBootstrapButtons.fire(
+                  'Error',
+                  'An error occurred while canceling the partnership.',
+                  'error'
+                );
+              }
+            },
+            (error) => {
+              console.error('Error canceling partnership:', error);
+              swalWithBootstrapButtons.fire(
+                'Error',
+                'An error occurred while canceling the partnership.',
+                'error'
+              );
+            }
+          );
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          swalWithBootstrapButtons.fire(
+            'Cancelled',
+            'The partnership has not been canceled.',
+            'error'
+          );
+        }
+      });
+  }
+  
   
 
 }

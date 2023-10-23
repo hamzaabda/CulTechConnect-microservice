@@ -58,4 +58,27 @@
             psI.deleteParteneriat(id);
         }
 
+
+        @GetMapping("/verify/{id}")
+        public ResponseEntity<Parteneriat> verifyParteneriat(@PathVariable Long id) {
+            Parteneriat verifiedParteneriat = psI.verifyParteneriat(id);
+
+            if (verifiedParteneriat != null) {
+                return ResponseEntity.ok(verifiedParteneriat);
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        }
+
+
+        @GetMapping("/cancelParteneriat/{id}")
+        public ResponseEntity<Parteneriat> cancelParteneriat(@PathVariable Long id) {
+            Parteneriat canceledParteneriat = psI.cancelParteneriat(id);
+
+            if (canceledParteneriat != null) {
+                return ResponseEntity.ok(canceledParteneriat);
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        }
     }

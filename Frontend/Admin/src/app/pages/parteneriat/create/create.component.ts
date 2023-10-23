@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, ViewChild, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import {  NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
 import { Parteneriat } from 'src/app/modules/models/parteneriat';
 import { PartnershipService } from 'src/app/services/partnership.service';
@@ -13,7 +14,7 @@ import Swal from 'sweetalert2';
 
 export class CreateComponent implements OnInit {
 
-  constructor(private calendar: NgbCalendar,private ps: PartnershipService) { }
+  constructor(private calendar: NgbCalendar,private ps: PartnershipService,private router: Router) { }
   breadCrumbItems: Array<{}>;
 
   selected: any;
@@ -24,7 +25,8 @@ export class CreateComponent implements OnInit {
     numeroTelephone: 0,
     email: '',
     description: '',
-    budget: 0
+    budget: 0,
+    verified: false
   };
 
 
@@ -33,7 +35,6 @@ export class CreateComponent implements OnInit {
     this.selected = '';
     this.hidden = true;
   }
-
   
   savePartnership() {
     if (this.isFormValid()) {
@@ -46,6 +47,7 @@ export class CreateComponent implements OnInit {
             timer: 1500,
           });
           console.log(res);
+          this.router.navigate(['/partnerships/list']); 
         },
         (error) => {
           Swal.fire({

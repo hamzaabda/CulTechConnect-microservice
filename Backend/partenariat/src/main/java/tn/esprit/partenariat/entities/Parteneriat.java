@@ -32,4 +32,6 @@ public class Parteneriat {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "verified")
+    private Boolean verified;
 }
