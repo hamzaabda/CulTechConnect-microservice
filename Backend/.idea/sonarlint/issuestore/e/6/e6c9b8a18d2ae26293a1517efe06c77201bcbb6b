@@ -1,0 +1,13 @@
+
+s
+java:S1488>"]Immediately return this expression instead of assigning it to the temporary variable "roles".(«‰öÊ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ŒîÂüÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(¸¥ÚÌ
+D
+java:S18745".Remove this use of "parser"; it is deprecated.(¤‹ıà
+K
+java:S18746"5Remove this use of "setSigningKey"; it is deprecated.(Ô™ğ‡
+N
+java:S1128"8Remove this unused import 'io.jsonwebtoken.io.Decoders'.(Ğ®ˆş
+S
+java:S1128"=Remove this unused import 'java.security.KeyRep.Type.SECRET'.(ƒ©’×

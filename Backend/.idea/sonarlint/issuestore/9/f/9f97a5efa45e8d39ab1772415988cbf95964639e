@@ -1,0 +1,9 @@
+
+[
+java:S4684-"@Replace this persistent entity with a simple POJO or DTO object.(¼ŞÏşşÿÿÿÿ
+V
+java:S46843"@Replace this persistent entity with a simple POJO or DTO object.(°¸õ
+l
+java:S1128"QRemove this unused import 'org.springframework.format.annotation.DateTimeFormat'.(‡ˆôƒøÿÿÿÿ
+O
+java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ

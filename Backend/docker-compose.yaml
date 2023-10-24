@@ -1,0 +1,153 @@
+version: '3.1'
+
+services:
+
+  mongo:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    networks:
+      - mynetwork
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password
+      ME_CONFIG_MONGODB_SERVER: "mongo"
+    networks:
+      - mynetwork
+
+  mysqldb:
+    image: mysql:5.7
+    container_name: mysqldb
+    networks:
+      - mynetwork
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
+  myphpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: myphpmyadmin
+    networks:
+      - mynetwork
+    ports:
+      - "9999:80"
+    depends_on:
+      - mysqldb
+    environment:
+      PMA_HOST: mysqldb
+      PMA_ARBITRARY: 1
+
+  auth-container:
+    image: auth
+    container_name: auth-container
+    networks:
+      - mynetwork
+    ports:
+      - 8888:8888
+    build:
+      context: ./Authentication  
+
+  user-container:
+    image: user
+    container_name: user-container
+    networks:
+      - mynetwork
+    ports:
+      - 8089:8089
+    build:
+      context: ./UserManagement  
+
+  chat-container:
+    image: chat
+    container_name: chat-container
+    networks:
+      - mynetwork
+    ports:
+      - 8082:8082
+    build:
+      context: ./Chat 
+
+  apigateway-container:
+    image: apigateway
+    container_name: apigateway-container
+    networks:
+      - mynetwork
+    ports:
+      - 9000:9000
+    build:
+      context: ./api-gateway 
+
+  eureka-container:
+    image: eureka
+    container_name: eureka-container
+    networks:
+      - mynetwork
+    ports:
+      - 8761:8761
+    build : ./Eureka
+
+  blog-container:
+    image: blog
+    container_name: blog-container
+    networks:
+      - mynetwork
+    ports:
+      - 8084:8084
+    build: ./blog
+
+  event-container:
+    image: event
+    container_name: event-container
+    networks:
+      - mynetwork
+    ports:
+      - 8085:8085
+    build : ./evenement
+
+  partenariat-container:
+    image: partenariat
+    container_name: partenariat-container
+    networks:
+      - mynetwork
+    ports:
+      - 8086:8086
+    build : ./partenariat
+
+  reclamation-container:
+    image: reclamation
+    container_name: reclamation-container
+    networks:
+      - mynetwork
+    ports:
+      - 8083:8083
+    build : ./reclamation
+
+  notification-container:
+    image: notification
+    container_name: notification-container
+    networks:
+      - mynetwork
+    ports:
+      - 9090:9090
+    build : ./notification
+
+
+
+
+
+
+networks:
+  mynetwork:
+    driver: bridge
+

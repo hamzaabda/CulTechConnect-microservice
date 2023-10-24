@@ -1,8 +1,8 @@
+// list.component.ts
+
 import { Component, OnInit } from '@angular/core';
-
-import { listData } from './data';
-
-import { InvoiceList } from './list.model';
+import { ReclamationService } from './reclamation.service';
+import { Reclamation, EventType } from './recalamation.model';
 
 @Component({
   selector: 'app-list',
@@ -10,31 +10,33 @@ import { InvoiceList } from './list.model';
   styleUrls: ['./list.component.scss']
 })
 
-/**
- * Invoices list component
- */
 export class ListComponent implements OnInit {
+  feedbacks: Reclamation[] = [];
+  traiteStatus: { [id: number]: boolean } = {}; // Dictionnaire pour le statut de traitement
 
-  // bread crumb items
-  breadCrumbItems: Array<{}>;
+  constructor(private reclamationService: ReclamationService) {}
 
-  listData: InvoiceList[];
-
-  constructor() { }
-
-  ngOnInit() {
-    this.breadCrumbItems = [{ label: 'Invoices' }, { label: 'Invoice List', active: true }];
-
-    /**
-     * fetches the data
-     */
-    this._fetchData();
+  ngOnInit(): void {
+    this.loadFeedbacks();
   }
 
-  /**
-   * fetches the invoice list data
-   */
-  private _fetchData() {
-    this.listData = listData;
+  loadFeedbacks(): void {
+    this.reclamationService.getAllFeedbacks().subscribe(data => {
+      this.feedbacks = data;
+    });
+  }
+
+  ajouterReclamation(): void {
+    // Créez une nouvelle réclamation et ajoutez-la à la liste comme précédemment
+  }
+
+  marquerCommeTraite(id: number): void {
+    // Utilisez l'ID pour marquer la réclamation comme traitée ou non
+    this.traiteStatus[id] = !this.traiteStatus[id];
+  }
+
+  estTraite(id: number): boolean {
+    // Vérifiez si la réclamation est traitée ou non
+    return this.traiteStatus[id];
   }
 }

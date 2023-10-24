@@ -5,6 +5,7 @@ import { AuthGuard } from './core/guards/auth.guard';
 import { LayoutComponent } from './layouts/layout.component';
 import { CyptolandingComponent } from './cyptolanding/cyptolanding.component';
 import { Page404Component } from './extrapages/page404/page404.component';
+import { Page500Component } from './extrapages/page500/page500.component';
 
 const routes: Routes = [
   { path: 'auth', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule) },
@@ -21,7 +22,9 @@ const routes: Routes = [
   { path: 'pages',canActivate: [AuthGuard], loadChildren: () => import('./extrapages/extrapages.module').then(m => m.ExtrapagesModule)},
 
   { path: 'crypto-ico-landing',canActivate: [AuthGuard], component: CyptolandingComponent },
+  { path: 'Page500', component: Page500Component },
   { path: '**', component: Page404Component },
+
 ];
 
 @NgModule({

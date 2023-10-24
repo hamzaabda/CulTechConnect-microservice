@@ -1,0 +1,20 @@
+
+[	java:S112f"FDefine and throw a dedicated exception instead of using a generic one.(Þï”Å
+\	java:S112„"FDefine and throw a dedicated exception instead of using a generic one.(Ðì±Ô
+a	java:S112‡"FDefine and throw a dedicated exception instead of using a generic one.(ç©±Ìûÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(¯êÉ¶ûÿÿÿÿ
+Q	java:S125X"<This block of commented-out lines of code should be removed.(Ûªë¬
+@	java:S106m"+Replace this use of System.out by a logger.(ñËÀ
+@	java:S106o"+Replace this use of System.out by a logger.(ÑÿÙŠ
+@	java:S106p"+Replace this use of System.out by a logger.(†à§¯
+@	java:S106|"+Replace this use of System.out by a logger.(õÎ£½
+@	java:S106}"+Replace this use of System.out by a logger.(­Úö
+E	java:S106~"+Replace this use of System.out by a logger.(Œ¯ñ§ýÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(›µ—“
+F	java:S106€"+Replace this use of System.out by a logger.(ó»Íßüÿÿÿÿ
+^
+java:S2094‘"BRemove this empty class, write its code or make it an "interface".(¦Á¦¼ýÿÿÿÿ
+c
+java:S1128"HRemove this unused import 'org.springframework.web.client.RestTemplate'.(Îö¼Þûÿÿÿÿ
+h
+java:S1128	"MRemove this unused import 'org.springframework.web.server.ServerWebExchange'.(É¡°Ëüÿÿÿÿ

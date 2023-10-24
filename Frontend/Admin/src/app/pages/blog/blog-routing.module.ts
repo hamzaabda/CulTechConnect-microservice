@@ -6,14 +6,18 @@ import { BloglistComponent } from './bloglist/bloglist.component';
 import { DetailComponent } from './detail/detail.component';
 
 import { FormsModule } from '@angular/forms';
+import { AuthGuard } from 'src/app/core/guards/auth.guard';
 const routes: Routes = [
     {
         path: 'list',
         component: BloglistComponent
+        , canActivate: [AuthGuard], data: { roles: ['ROLE_SUPERADMIN'] }
+
     },
     {
         path: 'grid',
         component: BloggridComponent
+
     },
     {
         path: 'detail/:id',

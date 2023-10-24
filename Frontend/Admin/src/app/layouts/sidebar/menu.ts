@@ -1,15 +1,12 @@
 import { MenuItem } from './menu.model';
 
 export const MENU: MenuItem[] = [
-    {
-        id: 1,
-        label: 'MENUITEMS.MENU.TEXT',
-        isTitle: true
-    },
+ 
     {
         id: 2,
         label: 'MENUITEMS.DASHBOARDS.TEXT',
         icon: 'bx-home-circle',
+        link:'/dashboard',
         badge: {
             variant: 'info',
             text: 'MENUITEMS.DASHBOARDS.BADGE',
@@ -41,21 +38,21 @@ export const MENU: MenuItem[] = [
             },
         ]*/
     },
-    {
-        id: 7,
-        isLayout: true
-    },
-    {
-        id: 8,
-        label: 'MENUITEMS.APPS.TEXT',
-        isTitle: true
-    },
-    {
-        id: 9,
-        label: 'MENUITEMS.CALENDAR.TEXT',
-        icon: 'bx-calendar',
-        link: '/calendar',
-    },
+    // {
+    //     id: 7,
+    //     isLayout: true
+    // },
+    // {
+    //     id: 8,
+    //     label: 'MENUITEMS.APPS.TEXT',
+    //     isTitle: true
+    // },
+    // {
+    //     id: 9,
+    //     label: 'MENUITEMS.CALENDAR.TEXT',
+    //     icon: 'bx-calendar',
+    //     link: '/calendar',
+    // },
     // {
     //     id: 10,
     //     label: 'MENUITEMS.CHAT.TEXT',
@@ -64,8 +61,11 @@ export const MENU: MenuItem[] = [
         
     // },
 
-
-
+    {
+        id: 1,
+        label: 'MENUITEMS.MENU.TEXT',
+        isTitle: true
+    },
     {
         id: 10,
         label: 'MENUITEMS.CHAT.TEXT',
@@ -77,19 +77,89 @@ export const MENU: MenuItem[] = [
                 label: 'MENUITEMS.CHAT.TEXT',
                 icon: 'bx-chat',
                 link: '/chating/chat',
-                
+             
             },
             {
                 id: 12,
-                label: 'Chat Logs',
+                label: 'ChatLog',
                 icon: 'bx-file',
-                link: '/chating/chathistory',
-                
+                link: '/chating/chathistory'       ,
+                role: 'ROLE_SUPERADMIN' 
+         
             }
 
         ]
     },
 
+    {
+        id: 36,
+        label: 'Réclamations',
+        icon: 'bx-receipt',
+        subItems: [
+            {
+                id: 37,
+                label: 'Réclamations',
+                link: '/invoices/list',
+                parentId: 36
+            },
+            // {
+            //     id: 38,
+            //     label: 'MENUITEMS.INVOICES.LIST.INVOICEDETAIL',
+            //     link: '/invoices/detail',
+            //     parentId: 36
+            // },
+        ]
+    },
+    {
+        id: 39,
+        label: 'Partnerships',
+        icon: 'bx-briefcase-alt-2',
+        subItems: [
+            {
+                id: 40,
+                label: 'List Grid',
+                link: '/partnerships/grid',
+                parentId: 38
+            },
+            {
+                id: 41,
+                label: 'Partnerships List',
+                link: '/partnerships/list',
+                parentId: 38
+            },
+            {
+                id: 43,
+                label: 'MENUITEMS.PROJECTS.LIST.CREATE',
+                link: '/partnerships/create',
+                parentId: 38
+            }
+        ]
+    },
+    {
+        id: 44,
+        label: 'Events',
+        icon: 'bx-task',
+        subItems: [
+            {
+                id: 45,
+                label: 'Liste des evenements',
+                link: '/tasks/list',
+                parentId: 44
+            },
+            // {
+            //     id: 46,
+            //     label: 'MENUITEMS.TASKS.LIST.KANBAN',
+            //     link: '/tasks/kanban',
+            //     parentId: 44
+            // },
+            {
+                id: 47,
+                label: 'Crée Un Evenement',
+                link: '/tasks/create',
+                parentId: 44
+            }
+        ]
+    },
 
 
 
@@ -125,227 +195,158 @@ export const MENU: MenuItem[] = [
         },
     },*/
     
-    {
-        id: 12,
-        label: 'Whats new',
-        icon: 'bx-store',
-        subItems: [
-            {
-                id: 13,
-                label: 'MENUITEMS.ECOMMERCE.LIST.PRODUCTS',
-                link: '/ecommerce/products',
-                parentId: 12
-            },
-            {
-                id: 14,
-                label: 'MENUITEMS.ECOMMERCE.LIST.PRODUCTDETAIL',
-                link: '/ecommerce/product-detail/1',
-                parentId: 12
-            },
-            {
-                id: 15,
-                label: 'MENUITEMS.ECOMMERCE.LIST.ORDERS',
-                link: '/ecommerce/orders',
-                parentId: 12
-            },
-            {
-                id: 16,
-                label: 'MENUITEMS.ECOMMERCE.LIST.CUSTOMERS',
-                link: '/ecommerce/customers',
-                parentId: 12
-            },
-            {
-                id: 17,
-                label: 'MENUITEMS.ECOMMERCE.LIST.CART',
-                link: '/ecommerce/cart',
-                parentId: 12
-            },
-            {
-                id: 18,
-                label: 'MENUITEMS.ECOMMERCE.LIST.CHECKOUT',
-                link: '/ecommerce/checkout',
-                parentId: 12
-            },
-            {
-                id: 19,
-                label: 'MENUITEMS.ECOMMERCE.LIST.SHOPS',
-                link: '/ecommerce/shops',
-                parentId: 12
-            },
-            {
-                id: 20,
-                label: 'MENUITEMS.ECOMMERCE.LIST.ADDPRODUCT',
-                link: '/ecommerce/add-product',
-                parentId: 12
-            },
-        ]
-    },
-    {
-        id: 21,
-        label: 'Exchange programs',
-        icon: 'bx-bitcoin',
-        subItems: [
-            {
-                id: 22,
-                label: 'MENUITEMS.CRYPTO.LIST.WALLET',
-                link: '/crypto/wallet',
-                parentId: 21
-            },
-            {
-                id: 23,
-                label: 'MENUITEMS.CRYPTO.LIST.BUY/SELL',
-                link: '/crypto/buy-sell',
-                parentId: 21
-            },
-            {
-                id: 24,
-                label: 'MENUITEMS.CRYPTO.LIST.EXCHANGE',
-                link: '/crypto/exchange',
-                parentId: 21
-            },
-            {
-                id: 25,
-                label: 'MENUITEMS.CRYPTO.LIST.LENDING',
-                link: '/crypto/lending',
-                parentId: 21
-            },
-            {
-                id: 26,
-                label: 'MENUITEMS.CRYPTO.LIST.ORDERS',
-                link: '/crypto/orders',
-                parentId: 21
-            },
-            {
-                id: 27,
-                label: 'MENUITEMS.CRYPTO.LIST.KYCAPPLICATION',
-                link: '/crypto/kyc-application',
-                parentId: 21
-            },
-            {
-                id: 28,
-                label: 'MENUITEMS.CRYPTO.LIST.ICOLANDING',
-                link: '/crypto-ico-landing',
-                parentId: 21
-            }
-        ]
-    },
-    {
-        id: 29,
-        label: 'MENUITEMS.EMAIL.TEXT',
-        icon: 'bx-envelope',
-        subItems: [
-            {
-                id: 30,
-                label: 'MENUITEMS.EMAIL.LIST.INBOX',
-                link: '/email/inbox',
-                parentId: 29
-            },
-            {
-                id: 31,
-                label: 'MENUITEMS.EMAIL.LIST.READEMAIL',
-                link: '/email/read/1',
-                parentId: 29
-            },
-            {
-                id: 32,
-                label: 'MENUITEMS.EMAIL.LIST.TEMPLATE.TEXT',
-                badge: {
-                    variant: 'success',
-                    text: 'MENUITEMS.EMAIL.LIST.TEMPLATE.BADGE',
-                },
-                parentId: 29,
-                subItems: [
-                    {
-                        id:33 ,
-                        label: 'MENUITEMS.EMAIL.LIST.TEMPLATE.LIST.BASIC',
-                        link: '/email/basic',
-                        parentId:32 
-                    },
-                    {
-                        id:34 ,
-                        label: 'MENUITEMS.EMAIL.LIST.TEMPLATE.LIST.ALERT',
-                        link: '/email/alert',
-                        parentId:32 
-                    },
-                    {
-                        id:35 ,
-                        label: 'MENUITEMS.EMAIL.LIST.TEMPLATE.LIST.BILLING',
-                        link: '/email/billing',
-                        parentId:32 
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        id: 36,
-        label: 'Claims',
-        icon: 'bx-receipt',
-        subItems: [
-            {
-                id: 37,
-                label: 'MENUITEMS.INVOICES.LIST.INVOICELIST',
-                link: '/invoices/list',
-                parentId: 36
-            },
-            {
-                id: 38,
-                label: 'MENUITEMS.INVOICES.LIST.INVOICEDETAIL',
-                link: '/invoices/detail',
-                parentId: 36
-            },
-        ]
-    },
-    {
-        id: 39,
-        label: 'Partnerships',
-        icon: 'bx-briefcase-alt-2',
-        subItems: [
-            {
-                id: 40,
-                label: 'List Grid',
-                link: '/partnerships/grid',
-                parentId: 38
-            },
-            {
-                id: 41,
-                label: 'Partnerships List',
-                link: '/partnerships/list',
-                parentId: 38
-            },
-            {
-                id: 43,
-                label: 'MENUITEMS.PROJECTS.LIST.CREATE',
-                link: '/partnerships/create',
-                parentId: 38
-            }
-        ]
-    },
-    {
-        id: 44,
-        label: 'Events',
-        icon: 'bx-task',
-        subItems: [
-            {
-                id: 45,
-                label: 'MENUITEMS.TASKS.LIST.TASKLIST',
-                link: '/tasks/list',
-                parentId: 44
-            },
-            {
-                id: 46,
-                label: 'MENUITEMS.TASKS.LIST.KANBAN',
-                link: '/tasks/kanban',
-                parentId: 44
-            },
-            {
-                id: 47,
-                label: 'MENUITEMS.TASKS.LIST.CREATETASK',
-                link: '/tasks/create',
-                parentId: 44
-            }
-        ]
-    },
+    // {
+    //     id: 12,
+    //     label: 'Whats new',
+    //     icon: 'bx-store',
+    //     subItems: [
+    //         {
+    //             id: 13,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.PRODUCTS',
+    //             link: '/ecommerce/products',
+    //             parentId: 12
+    //         },
+    //         {
+    //             id: 14,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.PRODUCTDETAIL',
+    //             link: '/ecommerce/product-detail/1',
+    //             parentId: 12
+    //         },
+    //         {
+    //             id: 15,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.ORDERS',
+    //             link: '/ecommerce/orders',
+    //             parentId: 12
+    //         },
+    //         {
+    //             id: 16,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.CUSTOMERS',
+    //             link: '/ecommerce/customers',
+    //             parentId: 12
+    //         },
+    //         {
+    //             id: 17,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.CART',
+    //             link: '/ecommerce/cart',
+    //             parentId: 12
+    //         },
+    //         {
+    //             id: 18,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.CHECKOUT',
+    //             link: '/ecommerce/checkout',
+    //             parentId: 12
+    //         },
+    //         {
+    //             id: 19,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.SHOPS',
+    //             link: '/ecommerce/shops',
+    //             parentId: 12
+    //         },
+    //         {
+    //             id: 20,
+    //             label: 'MENUITEMS.ECOMMERCE.LIST.ADDPRODUCT',
+    //             link: '/ecommerce/add-product',
+    //             parentId: 12
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 21,
+    //     label: 'Exchange programs',
+    //     icon: 'bx-bitcoin',
+    //     subItems: [
+    //         {
+    //             id: 22,
+    //             label: 'MENUITEMS.CRYPTO.LIST.WALLET',
+    //             link: '/crypto/wallet',
+    //             parentId: 21
+    //         },
+    //         {
+    //             id: 23,
+    //             label: 'MENUITEMS.CRYPTO.LIST.BUY/SELL',
+    //             link: '/crypto/buy-sell',
+    //             parentId: 21
+    //         },
+    //         {
+    //             id: 24,
+    //             label: 'MENUITEMS.CRYPTO.LIST.EXCHANGE',
+    //             link: '/crypto/exchange',
+    //             parentId: 21
+    //         },
+    //         {
+    //             id: 25,
+    //             label: 'MENUITEMS.CRYPTO.LIST.LENDING',
+    //             link: '/crypto/lending',
+    //             parentId: 21
+    //         },
+    //         {
+    //             id: 26,
+    //             label: 'MENUITEMS.CRYPTO.LIST.ORDERS',
+    //             link: '/crypto/orders',
+    //             parentId: 21
+    //         },
+    //         {
+    //             id: 27,
+    //             label: 'MENUITEMS.CRYPTO.LIST.KYCAPPLICATION',
+    //             link: '/crypto/kyc-application',
+    //             parentId: 21
+    //         },
+    //         {
+    //             id: 28,
+    //             label: 'MENUITEMS.CRYPTO.LIST.ICOLANDING',
+    //             link: '/crypto-ico-landing',
+    //             parentId: 21
+    //         }
+    //     ]
+    // },
+    // {
+    //     id: 29,
+    //     label: 'MENUITEMS.EMAIL.TEXT',
+    //     icon: 'bx-envelope',
+    //     subItems: [
+    //         {
+    //             id: 30,
+    //             label: 'MENUITEMS.EMAIL.LIST.INBOX',
+    //             link: '/email/inbox',
+    //             parentId: 29
+    //         },
+    //         {
+    //             id: 31,
+    //             label: 'MENUITEMS.EMAIL.LIST.READEMAIL',
+    //             link: '/email/read/1',
+    //             parentId: 29
+    //         },
+    //         {
+    //             id: 32,
+    //             label: 'MENUITEMS.EMAIL.LIST.TEMPLATE.TEXT',
+    //             badge: {
+    //                 variant: 'success',
+    //                 text: 'MENUITEMS.EMAIL.LIST.TEMPLATE.BADGE',
+    //             },
+    //             parentId: 29,
+    //             subItems: [
+    //                 {
+    //                     id:33 ,
+    //                     label: 'MENUITEMS.EMAIL.LIST.TEMPLATE.LIST.BASIC',
+    //                     link: '/email/basic',
+    //                     parentId:32 
+    //                 },
+    //                 {
+    //                     id:34 ,
+    //                     label: 'MENUITEMS.EMAIL.LIST.TEMPLATE.LIST.ALERT',
+    //                     link: '/email/alert',
+    //                     parentId:32 
+    //                 },
+    //                 {
+    //                     id:35 ,
+    //                     label: 'MENUITEMS.EMAIL.LIST.TEMPLATE.LIST.BILLING',
+    //                     link: '/email/billing',
+    //                     parentId:32 
+    //                 }
+    //             ]
+    //         }
+    //     ]
+    // },
     // {
     //     id: 48,
     //     label: 'Users',
@@ -407,124 +408,124 @@ export const MENU: MenuItem[] = [
         subItems: [
             {
                 id: 53,
-                label: 'MENUITEMS.BLOG.LIST.BLOGLIST',
+                label: 'Crée un blog',
                 link: '/blog/list',
                 parentId: 52
             },
             {
                 id: 54,
-                label: 'MENUITEMS.BLOG.LIST.BLOGGRID',
+                label: 'Liste des Blogs',
                 link: '/blog/grid',
                 parentId: 52
             },
-            {
-                id: 55,
-                label: 'MENUITEMS.BLOG.LIST.DETAIL',
-                link: '/blog/detail',
-                parentId: 52
-            },
+            // {
+            //     id: 55,
+            //     label: 'MENUITEMS.BLOG.LIST.DETAIL',
+            //     link: '/blog/detail',
+            //     parentId: 52
+            // },
         ]
     },
-    {
-        id: 56,
-        label: 'MENUITEMS.PAGES.TEXT',
-        isTitle: true
-    },
-    {
-        id: 57,
-        label: 'MENUITEMS.AUTHENTICATION.TEXT',
-        icon: 'bx-user-circle',
-        badge: {
-            variant: 'success',
-            text: 'MENUITEMS.AUTHENTICATION.BADGE',
-        },
-        subItems: [
-            {
-                id: 58,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.LOGIN',
-                link: '/account/login',
-                parentId: 57
-            },
-            /*{
-                id: 59,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.LOGIN2',
-                link: '/account/login-2',
-                parentId: 57
-            },*/
-                   {
-                id: 60,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.REGISTER',
-                link: '/account/signup',
-                parentId: 57
-            },
-            /*{
-                id: 61,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.REGISTER2',
-                link: '/account/signup-2',
-                parentId: 57
-            },*/
-            {
-                id: 62,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.RECOVERPWD',
-                link: '/account/reset-password',
-                parentId: 57
-            },
-            /*{
-                id: 63,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.RECOVERPWD2',
-                link: '/account/recoverpwd-2',
-                parentId: 57
-            },*/
-            {
-                id: 64,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.LOCKSCREEN',
-                link: '/pages/lock-screen-1',
-                parentId: 57
-            },
-            /*{
-                id: 65,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.LOCKSCREEN2',
-                link: '/pages/lock-screen-2',
-                parentId: 57
-            },*/
-            {
-                id: 66,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.CONFIRMMAIL',
-                link: '/pages/confirm-mail',
-                parentId: 57
-            },
-            /*{
-                id: 67,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.CONFIRMMAIL2',
-                link: '/pages/confirm-mail-2',
-                parentId: 57
-            },*/
-            {
-                id: 68,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.EMAILVERIFICATION',
-                link: '/pages/email-verification',
-                parentId: 57
-            },
-            /*{
-                id: 69,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.EMAILVERIFICATION2',
-                link: '/pages/email-verification-2',
-                parentId: 57
-            },*/
-            {
-                id: 70,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.TWOSTEPVERIFICATION',
-                link: '/pages/two-step-verification',
-                parentId: 57
-            },
-            /*{
-                id: 71,
-                label: 'MENUITEMS.AUTHENTICATION.LIST.TWOSTEPVERIFICATION2',
-                link: '/pages/two-step-verification-2',
-                parentId: 57
-            }*/
-        ]
-    },
+    // {
+    //     id: 56,
+    //     label: 'MENUITEMS.PAGES.TEXT',
+    //     isTitle: true
+    // },
+    // {
+    //     id: 57,
+    //     label: 'MENUITEMS.AUTHENTICATION.TEXT',
+    //     icon: 'bx-user-circle',
+    //     badge: {
+    //         variant: 'success',
+    //         text: 'MENUITEMS.AUTHENTICATION.BADGE',
+    //     },
+    //     subItems: [
+    //         {
+    //             id: 58,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.LOGIN',
+    //             link: '/account/login',
+    //             parentId: 57
+    //         },
+    //         /*{
+    //             id: 59,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.LOGIN2',
+    //             link: '/account/login-2',
+    //             parentId: 57
+    //         },*/
+    //                {
+    //             id: 60,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.REGISTER',
+    //             link: '/account/signup',
+    //             parentId: 57
+    //         },
+    //         /*{
+    //             id: 61,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.REGISTER2',
+    //             link: '/account/signup-2',
+    //             parentId: 57
+    //         },*/
+    //         {
+    //             id: 62,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.RECOVERPWD',
+    //             link: '/account/reset-password',
+    //             parentId: 57
+    //         },
+    //         /*{
+    //             id: 63,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.RECOVERPWD2',
+    //             link: '/account/recoverpwd-2',
+    //             parentId: 57
+    //         },*/
+    //         {
+    //             id: 64,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.LOCKSCREEN',
+    //             link: '/pages/lock-screen-1',
+    //             parentId: 57
+    //         },
+    //         /*{
+    //             id: 65,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.LOCKSCREEN2',
+    //             link: '/pages/lock-screen-2',
+    //             parentId: 57
+    //         },*/
+    //         {
+    //             id: 66,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.CONFIRMMAIL',
+    //             link: '/pages/confirm-mail',
+    //             parentId: 57
+    //         },
+    //         /*{
+    //             id: 67,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.CONFIRMMAIL2',
+    //             link: '/pages/confirm-mail-2',
+    //             parentId: 57
+    //         },*/
+    //         {
+    //             id: 68,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.EMAILVERIFICATION',
+    //             link: '/pages/email-verification',
+    //             parentId: 57
+    //         },
+    //         /*{
+    //             id: 69,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.EMAILVERIFICATION2',
+    //             link: '/pages/email-verification-2',
+    //             parentId: 57
+    //         },*/
+    //         {
+    //             id: 70,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.TWOSTEPVERIFICATION',
+    //             link: '/pages/two-step-verification',
+    //             parentId: 57
+    //         },
+    //         /*{
+    //             id: 71,
+    //             label: 'MENUITEMS.AUTHENTICATION.LIST.TWOSTEPVERIFICATION2',
+    //             link: '/pages/two-step-verification-2',
+    //             parentId: 57
+    //         }*/
+    //     ]
+    // },
     /*
         id: 72,
         label: 'MENUITEMS.UTILITY.TEXT',
@@ -821,79 +822,79 @@ export const MENU: MenuItem[] = [
             }
         ]
     },*/
-    {
-        id: 118,
-        label: 'MENUITEMS.ICONS.TEXT',
-        icon: 'bx-aperture',
-        subItems: [
-            {
-                id: 119,
-                label: 'MENUITEMS.ICONS.LIST.BOXICONS',
-                link: '/icons/boxicons',
-                parentId: 118
-            },
-            {
-                id: 120,
-                label: 'MENUITEMS.ICONS.LIST.MATERIALDESIGN',
-                link: '/icons/materialdesign',
-                parentId: 118
-            },
-            {
-                id: 121,
-                label: 'MENUITEMS.ICONS.LIST.DRIPICONS',
-                link: '/icons/dripicons',
-                parentId: 118
-            },
-            {
-                id: 122,
-                label: 'MENUITEMS.ICONS.LIST.FONTAWESOME',
-                link: '/icons/fontawesome',
-                parentId: 118
-            },
-        ]
-    },
-    {
-        id: 123,
-        label: 'MENUITEMS.MAPS.TEXT',
-        icon: 'bx-map',
-        subItems: [
-            {
-                id: 124,
-                label: 'MENUITEMS.MAPS.LIST.GOOGLEMAP',
-                link: '/maps/google',
-                parentId: 123
-            }
-        ]
-    },
-    {
-        id: 125,
-        label: 'MENUITEMS.MULTILEVEL.TEXT',
-        icon: 'bx-share-alt',
-        subItems: [
-            {
-                id: 126,
-                label: 'MENUITEMS.MULTILEVEL.LIST.LEVEL1.1',
-                link: '#',
-                parentId: 125
-            },
-            {
-                id: 127,
-                label: 'MENUITEMS.MULTILEVEL.LIST.LEVEL1.2',
-                parentId: 125,
-                subItems: [
-                    {
-                        id: 128,
-                        label: 'MENUITEMS.MULTILEVEL.LIST.LEVEL1.LEVEL2.1',
-                        parentId: 127,
-                    },
-                    {
-                        id: 129,
-                        label: 'MENUITEMS.MULTILEVEL.LIST.LEVEL1.LEVEL2.2',
-                        parentId: 127,
-                    }
-                ]
-            },
-        ]
-    }
+    // {
+    //     id: 118,
+    //     label: 'MENUITEMS.ICONS.TEXT',
+    //     icon: 'bx-aperture',
+    //     subItems: [
+    //         {
+    //             id: 119,
+    //             label: 'MENUITEMS.ICONS.LIST.BOXICONS',
+    //             link: '/icons/boxicons',
+    //             parentId: 118
+    //         },
+    //         {
+    //             id: 120,
+    //             label: 'MENUITEMS.ICONS.LIST.MATERIALDESIGN',
+    //             link: '/icons/materialdesign',
+    //             parentId: 118
+    //         },
+    //         {
+    //             id: 121,
+    //             label: 'MENUITEMS.ICONS.LIST.DRIPICONS',
+    //             link: '/icons/dripicons',
+    //             parentId: 118
+    //         },
+    //         {
+    //             id: 122,
+    //             label: 'MENUITEMS.ICONS.LIST.FONTAWESOME',
+    //             link: '/icons/fontawesome',
+    //             parentId: 118
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 123,
+    //     label: 'MENUITEMS.MAPS.TEXT',
+    //     icon: 'bx-map',
+    //     subItems: [
+    //         {
+    //             id: 124,
+    //             label: 'MENUITEMS.MAPS.LIST.GOOGLEMAP',
+    //             link: '/maps/google',
+    //             parentId: 123
+    //         }
+    //     ]
+    // },
+    // {
+    //     id: 125,
+    //     label: 'MENUITEMS.MULTILEVEL.TEXT',
+    //     icon: 'bx-share-alt',
+    //     subItems: [
+    //         {
+    //             id: 126,
+    //             label: 'MENUITEMS.MULTILEVEL.LIST.LEVEL1.1',
+    //             link: '#',
+    //             parentId: 125
+    //         },
+    //         {
+    //             id: 127,
+    //             label: 'MENUITEMS.MULTILEVEL.LIST.LEVEL1.2',
+    //             parentId: 125,
+    //             subItems: [
+    //                 {
+    //                     id: 128,
+    //                     label: 'MENUITEMS.MULTILEVEL.LIST.LEVEL1.LEVEL2.1',
+    //                     parentId: 127,
+    //                 },
+    //                 {
+    //                     id: 129,
+    //                     label: 'MENUITEMS.MULTILEVEL.LIST.LEVEL1.LEVEL2.2',
+    //                     parentId: 127,
+    //                 }
+    //             ]
+    //         },
+    //     ]
+    // }
 ];
 

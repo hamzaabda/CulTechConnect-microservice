@@ -40,7 +40,7 @@ public class ChatController {
         chatNotification.setSender(chatMessage.getSender());
         chatNotification.setTimestamp(LocalDateTime.now());
 
-        restTemplate.postForObject("http://localhost:9090/api/notification/addnotification", chatNotification, ChatNotification.class);
+        restTemplate.postForObject("http://notification-container:9090/api/notification/addnotification", chatNotification, ChatNotification.class);
 
 
         return chatMessage;

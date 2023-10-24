@@ -1,0 +1,36 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(²ı”ˆ
+x
+java:S3305"]Inject this field value directly into "authenticationProvider", the only method that uses it.(ã°ÿÉùÿÿÿÿ
+Z
+java:S1874"DRemove this use of "WebSecurityConfigurerAdapter"; it is deprecated.(Ë¶Ï“
+…
+java:S4601/"iReorder the URL patterns from most to less specific, the pattern "/social/**" should occurs before "/**".(ú™æa8€ÌÅ‹¶1
+‚
+java:S46010"eReorder the URL patterns from most to less specific, the pattern "/login" should occurs before "/**".(¢…Ûá8€ÌÅ‹¶1
+‹
+java:S46011"nReorder the URL patterns from most to less specific, the pattern "/auth/social/**" should occurs before "/**".(±ç½8„ÅÆ‹¶1
+
+java:S46012"rReorder the URL patterns from most to less specific, the pattern "/auth/social/google" should occurs before "/**".(Ùã´¡8¢ôÇ‹¶1
+‘
+java:S46013"tReorder the URL patterns from most to less specific, the pattern "/auth/social/facebook" should occurs before "/**".(Îÿ‘Õ8øÈ‹¶1
+
+java:S46015"kReorder the URL patterns from most to less specific, the pattern "/v2/api-docs" should occurs before "/**".(íàå†ÿÿÿÿÿ8€ÌÅ‹¶1
+
+java:S46016"kReorder the URL patterns from most to less specific, the pattern "/v3/api-docs" should occurs before "/**".(íËäôûÿÿÿÿ8€ÌÅ‹¶1
+
+java:S46017"nReorder the URL patterns from most to less specific, the pattern "/v3/api-docs/**" should occurs before "/**".(¡æ»ùÿÿÿÿ8€ÌÅ‹¶1
+“
+java:S46018"qReorder the URL patterns from most to less specific, the pattern "/swagger-resources" should occurs before "/**".(¶›àÿÿÿÿÿ8€ÌÅ‹¶1
+‘
+java:S46019"tReorder the URL patterns from most to less specific, the pattern "/swagger-resources/**" should occurs before "/**".(ô»Õß8€ÌÅ‹¶1
+
+java:S4601:"pReorder the URL patterns from most to less specific, the pattern "/configuration/ui" should occurs before "/**".(–ğÛ8€ÌÅ‹¶1
+˜
+java:S4601;"vReorder the URL patterns from most to less specific, the pattern "/configuration/security" should occurs before "/**".(ñ´»Ëøÿÿÿÿ8€ÌÅ‹¶1
+
+java:S4601<"mReorder the URL patterns from most to less specific, the pattern "/swagger-ui/**" should occurs before "/**".(ô¦«şÿÿÿÿ8€ÌÅ‹¶1
+†
+java:S4601="jReorder the URL patterns from most to less specific, the pattern "/webjars/**" should occurs before "/**".(¶ÀÄ&8€ÌÅ‹¶1
+Œ
+java:S4601>"oReorder the URL patterns from most to less specific, the pattern "/swagger-ui.html" should occurs before "/**".(Û­¾™8úÈ‹¶1

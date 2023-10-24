@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
+import { HttpClient, HttpErrorResponse} from "@angular/common/http";
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Parteneriat } from '../modules/models/parteneriat';
@@ -8,16 +8,16 @@ import { Parteneriat } from '../modules/models/parteneriat';
   providedIn: 'root'
 })
 export class PartnershipService {
-  httpOptions = {
-    headers: new HttpHeaders({
-      "Content-Type": "application/json",
-    }),
-  };
+  // httpOptions = {
+  //   headers: new HttpHeaders({
+  //     "Content-Type": "application/json",
+  //   }),
+  // };
 
   b: boolean = false;
   text: string = "";
 
-  apiUrl = "http://localhost:8086/api/partenariat/Parteneriat";
+  apiUrl = "http://localhost:9000/api/partenariat/Parteneriat";
   constructor(private http: HttpClient) {}
 
   getPartnerships(): Observable<Parteneriat[]> {
@@ -33,8 +33,9 @@ export class PartnershipService {
   addParteneriat(p: Parteneriat): Observable<Parteneriat> {
     return this.http.post<Parteneriat>(
       this.apiUrl + "/createParteneriat",
-      p,
-      this.httpOptions
+      p
+      // ,
+      // this.httpOptions
     );
   }
 

@@ -100,7 +100,7 @@ export class DetailComponent implements OnInit {
 
 
   getBlocPost(id:any){
-    this.http.get('http://localhost:8084/api/blog/blog-posts/'+id)
+    this.http.get('http://localhost:9000/api/blog/blog-posts/'+id)
     .subscribe((data) => {
       console.log('blog',data);
       this.BlocPost = data;
@@ -132,7 +132,7 @@ export class DetailComponent implements OnInit {
       "text": this.commentMessage,
       "createdDate":this.getCurrentDate()
     };
-this.http.post(`http://localhost:8084/api/blog/blog-posts/${this.id}/assign-comment`,data).subscribe((data)=>{
+this.http.post(`http://localhost:9000/api/blog/blog-posts/${this.id}/assign-comment`,data).subscribe((data)=>{
 this.getDetailById();
 })
   }

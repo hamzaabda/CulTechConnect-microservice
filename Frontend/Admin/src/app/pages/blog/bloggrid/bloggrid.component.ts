@@ -21,7 +21,7 @@ export class BloggridComponent implements OnInit {
 
   }
   getallposts(){
-    this.http.get('http://localhost:8084/api/blog/blog-posts/all')
+    this.http.get('http://localhost:9000/api/blog/blog-posts/all')
     .subscribe((data) => {
       console.log('blog',data);
       this.listPost = data;
@@ -29,7 +29,7 @@ export class BloggridComponent implements OnInit {
     });
   }
  getallcommentsCount(){
-  this.http.get('http://localhost:8084/api/blog/api/comments/count')
+  this.http.get('http://localhost:9000/api/blog/api/comments/count')
   .subscribe((data) => {
     console.log('blog',data);
     this.Comments = data;

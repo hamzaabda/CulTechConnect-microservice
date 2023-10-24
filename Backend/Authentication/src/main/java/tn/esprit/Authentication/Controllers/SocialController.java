@@ -87,7 +87,7 @@ public class SocialController {
             user = createUser(emailgoogle,firstName,lastName,profilePictureUrl,firstName+lastName);
             user.setProfileimageurl(profilePictureUrl);
             restTemplate.postForEntity(
-                    "http://localhost:9000/api/user/adherant/CreateUser",
+                    "http://apigateway-container:9000/api/user/adherant/CreateUser",
                     user,
                     AppUser.class
             );
@@ -150,7 +150,7 @@ public class SocialController {
 
             log.info("========> Email Dont Exist");
             restTemplate.postForEntity(
-                    "http://localhost:9000/api/user/adherant/CreateUser",
+                    "http://apigateway-container:9000/api/user/adherant/CreateUser",
                     userfacebook,
                     AppUser.class
             );

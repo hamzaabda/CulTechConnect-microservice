@@ -13,8 +13,6 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/blog-posts")
-@CrossOrigin(origins = "http://localhost:4300/")
-
 public class BlogPostController {
     private BlogPostService blogPostService;
 

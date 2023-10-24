@@ -146,7 +146,7 @@ public class AuthService {
             userAuthRepository.save(appuser);
 
             template.postForEntity(
-                    "http://localhost:9000/api/user/adherant/CreateUser",
+                    "http://apigateway-container:9000/api/user/adherant/CreateUser",
                     appuser,
                     AppUser.class
             );
@@ -160,7 +160,7 @@ public class AuthService {
             );
             emailConfirmationTokenService.saveConfirmationToken(confirmationToken);
 
-            String link = "http://localhost:9000/authentication-service/auth/confirm?token=" + token;
+            String link = "http://apigateway-container:9000/authentication-service/auth/confirm?token=" + token;
             emailSenderService.send(
                     registerRequest.getEmail(),
                     "Confirmer votre Courriel.",

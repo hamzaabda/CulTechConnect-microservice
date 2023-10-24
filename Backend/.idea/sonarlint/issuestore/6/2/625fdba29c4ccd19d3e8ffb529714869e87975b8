@@ -1,0 +1,10 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(•È…¿
+V
+java:S36557"@Call "confirmationToken.isPresent()" before accessing the value.(¼žÿô
+M
+java:S3655E"7Call "Optional#isPresent()" before accessing the value.(à’Ïç
+A
+java:S1452,"&Remove usage of generic wildcard type.(ÏÀ£¬ùÿÿÿÿ
+t
+java:S1128"YRemove this unused import 'org.springframework.security.crypto.password.PasswordEncoder'.(‰¡ßáÿÿÿÿÿ

@@ -18,8 +18,12 @@ public class RouteValidator {
             "/auth/social/google",
             "/auth/social/facebook",
             "/auth/getroles",
-            "/adherant/CreateUser",
-            "/api/user/adherant/getuserbyemail/"
+            "/api/user/adherant/getuserbyemail/",
+            "/api/Parteneriat",
+            "/api/blog/",
+            "/api/reclamation/",
+            "/api/user/",
+            "/auth/"
     );
 
 
